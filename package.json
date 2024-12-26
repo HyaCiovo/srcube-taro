@@ -1,0 +1,15 @@
+{
+  "name": "srcube-taro",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "catalog:"
+  },
+  "packageManager": "pnpm@9.15.1",
+  "engines": {
+    "node": "20.18.0"
+  }
+}

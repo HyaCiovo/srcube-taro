@@ -1,0 +1,12 @@
+{
+  "extends": "@srcube-taro/ts-config/react",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "./build.config.ts"]
+}
