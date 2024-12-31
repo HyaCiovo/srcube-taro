@@ -1,0 +1,14 @@
+type: 'application'
+
+tasks:
+  dev-weapp:
+    command: 'npm run dev:weapp'
+    options:
+      runInCI: false
+      persistent: true
+    deps:
+      - 'ui:dev'
+  build-weapp:
+    command: 'npm run build:weapp'
+    deps:
+      - 'ui:build'
