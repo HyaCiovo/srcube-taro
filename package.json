@@ -5,11 +5,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "concurrently": "catalog:"
-  },
+  "devDependencies": {},
   "packageManager": "pnpm@9.15.1",
   "engines": {
-    "node": "20.18.0"
+    "node": "18.20.5"
   }
 }
