@@ -4,7 +4,6 @@
   "extends": "./_.json",
   "compilerOptions": {
     "declaration": true,
-    "sourceMap": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
     "strict": true,
@@ -15,7 +14,6 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "noImplicitAny": false,
-    // 
     "jsx": "react-jsx",
     "strictNullChecks": false
   }
