@@ -4,11 +4,11 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "concurrently 'pnpm run build:tailwind' 'unbuild'",
-    "build:tailwind": "tailwindcss -c ./tailwind.config.js -o ./dist/styles.css"
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -16,8 +16,13 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "import": "./dist/plugins/index.js",
+      "require": "./dist/plugins/index.cjs"
     }
   },
   "keywords": [],
@@ -30,15 +35,16 @@
     "classnames": "catalog:"
   },
   "devDependencies": {
+    "@egoist/tailwindcss-icons": "catalog:",
+    "@iconify/json": "catalog:",
     "@srcube-taro/ts-config": "workspace:*",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
-    "tsc-alias": "catalog:",
-    "unbuild": "catalog:",
-    "tailwind-variants": "catalog:"
+    "tailwind-variants": "catalog:",
+    "tsup": "catalog:"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "tailwindcss": "^3.4.17"
+    "react": "catalog:",
+    "tailwindcss": "catalog:"
   }
 }

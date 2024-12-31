@@ -2,6 +2,9 @@ type: 'library'
 
 tasks:
   build:
-    command: 'unbuild'
+    command: 'tsup'
   dev:
-    command: 'unbuild --stud'
+    command: 'tsup --watch'
+    options:
+      runInCI: false
+      persistent: true
