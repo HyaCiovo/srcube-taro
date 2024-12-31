@@ -20,7 +20,7 @@ export default defineConfig<'webpack5'>(
       },
       sourceRoot: 'src',
       outputRoot: 'dist',
-      plugins: [],
+      plugins: ['tarojs-router-next-plugin'],
       defineConstants: {},
       copy: {
         patterns: [],
@@ -29,6 +29,9 @@ export default defineConfig<'webpack5'>(
       framework: 'react',
       compiler: {
         type: 'webpack5',
+        prebundle: {
+          exclude: ['tarojs-router-next'],
+        },
       },
       cache: {
         enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
