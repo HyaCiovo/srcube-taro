@@ -8,7 +8,6 @@ export const button = tv({
     'transition-all duration-200 ease-out',
     'border border-solid after:border-none',
     'outline-none',
-    'active:scale-95',
   ],
   variants: {
     color: {
@@ -35,6 +34,7 @@ export const button = tv({
     },
     disabled: {
       true: 'opacity-50 active:scale-100',
+      false: 'active:scale-95',
     },
     block: {
       true: 'w-full',
