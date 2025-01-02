@@ -1,10 +1,8 @@
-// Actions
-export { Button } from './actions/button'
-export type { ButtonProps } from './actions/button'
-
-// Effects
-export { Spinner } from './effects/spinner'
-export type { SpinnerProps } from './effects/spinner'
+// Components
+export { Button } from './components/button'
+export type { ButtonProps } from './components/button'
+export { Spinner } from './components/spinner'
+export type { SpinnerProps } from './components/spinner'
 
 // Layouts
 export { Box } from './layouts/box'

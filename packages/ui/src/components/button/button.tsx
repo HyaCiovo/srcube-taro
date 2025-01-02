@@ -1,7 +1,7 @@
 import { type ButtonProps as NativeButtonProps } from '@tarojs/components'
 import { forwardRef } from 'react'
 import { useButton, UseButtonProps } from './use'
-import { Spinner } from '@/effects/spinner'
+import { Spinner } from '@/components/spinner'
 
 export interface ButtonProps extends UseButtonProps {}
 
