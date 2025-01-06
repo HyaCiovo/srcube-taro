@@ -1,41 +1,10 @@
-import { tv, type VariantProps } from 'tailwind-variants'
 import { NativeProps } from '@/utils/native-props'
+import { SlotsToClasses } from '@/utils/types'
 import { View, type ViewProps } from '@tarojs/components'
-import { useMemo, type ReactNode, type ForwardedRef } from 'react'
-
-const spinner = tv({
-  base: 'inline-flex items-center justify-center',
-  variants: {
-    size: {
-      xs: 'w-3 h-3',
-      sm: 'w-4 h-4',
-      md: 'w-6 h-6',
-      lg: 'w-8 h-8',
-      xl: 'w-12 h-12',
-    },
-    color: {
-      current: 'text-current',
-      white: 'text-white',
-      default: 'text-gray-400',
-      primary: 'text-primary-500',
-      secondary: 'text-secondary-500',
-      success: 'text-success-500',
-      warning: 'text-warning-500',
-      danger: 'text-danger-500',
-    },
-    labelPlacement: {
-      top: 'flex-col-reverse',
-      right: 'flex-row',
-      bottom: 'flex-col',
-      left: 'flex-row-reverse',
-    },
-  },
-  defaultVariants: {
-    size: 'md',
-    color: 'default',
-    labelPlacement: 'right',
-  },
-})
+import cn from 'classnames'
+import { useMemo, type ForwardedRef, type ReactNode } from 'react'
+import { type VariantProps } from 'tailwind-variants'
+import { spinner, SpinnerSlots } from './style'
 
 type SpinnerVariantProps = VariantProps<typeof spinner>
 
@@ -48,6 +17,10 @@ interface Props {
    * Label to display next to the spinner
    */
   label?: ReactNode
+  /**
+   * Class names for slots
+   */
+  classNames?: SlotsToClasses<SpinnerSlots>
 }
 
 export type UseSpinnerProps = Props &
@@ -55,21 +28,31 @@ export type UseSpinnerProps = Props &
   SpinnerVariantProps
 
 export const useSpinner = (props: UseSpinnerProps) => {
-  const { ref, size, color, label, className, ...rest } = props
+  const { ref, size, color, label, className, classNames, ...rest } = props
 
-  const styles = useMemo(
+  const slots = useMemo(
     () => spinner({ size, color, className }),
     [size, color, className],
   )
 
+  const styles = useMemo(
+    () => ({
+      base: cn(slots.base({ class: classNames?.base }), className),
+      icon: cn(slots.icon({ class: classNames?.icon })),
+      label: cn(slots.label({ class: classNames?.label })),
+    }),
+    [classNames?.base, classNames?.icon, classNames?.label, className],
+  )
+
   const getSpinnerProps = () => ({
-    className: styles,
     ...rest,
   })
 
   return {
     Component: View,
     domRef: ref,
+    slots,
+    styles,
     label,
     getSpinnerProps,
   }

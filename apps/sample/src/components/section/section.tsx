@@ -12,7 +12,7 @@ const Section: FC<PropsWithChildren<SectionProps>> = (props) => {
 
   return (
     <Box className="flex flex-col gap-2 mx-4 rounded-lg">
-      <Box className="flex items-center px-2 text-lg font-bold">{title}</Box>
+      <Box className="flex items-center px-2 text-xs font-bold">{title}</Box>
       <Box className={cn(contentClass)}>{children}</Box>
     </Box>
   )

@@ -9,10 +9,11 @@ const Button = forwardRef<NativeButtonProps, ButtonProps>((props, ref) => {
   const {
     Component,
     domRef,
+    styles,
     loading,
     startContent,
     endContent,
-    spinner = <Spinner color="current" />,
+    spinner = <Spinner />,
     spinnerPlacement,
     children,
     getButtonProps,
@@ -22,7 +23,12 @@ const Button = forwardRef<NativeButtonProps, ButtonProps>((props, ref) => {
   })
 
   return (
-    <Component ref={domRef} {...getButtonProps()}>
+    <Component
+      ref={domRef}
+      className={styles.normal}
+      hoverClass={styles.hover}
+      {...getButtonProps()}
+    >
       {startContent}
       {loading && spinnerPlacement === 'start' && spinner}
       {children}

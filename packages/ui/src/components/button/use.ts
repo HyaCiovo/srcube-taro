@@ -102,8 +102,6 @@ export const useButton = (props: UseButtonProps) => {
 
   const getButtonProps = useCallback(() => {
     return {
-      className: styles.normal,
-      hoverClass: styles.hover,
       disabled: disabled || loading,
       onClick: handleTap,
       ...rest,
@@ -113,6 +111,7 @@ export const useButton = (props: UseButtonProps) => {
   return {
     Component,
     domRef: ref,
+    styles,
     startContent: renderPlacedContent('start'),
     endContent: renderPlacedContent('end'),
     spinner,

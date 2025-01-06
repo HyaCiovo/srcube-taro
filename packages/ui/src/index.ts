@@ -1,6 +1,7 @@
 // Components
 export { Button } from './components/button'
 export type { ButtonProps } from './components/button'
+
 export { Spinner } from './components/spinner'
 export type { SpinnerProps } from './components/spinner'
 

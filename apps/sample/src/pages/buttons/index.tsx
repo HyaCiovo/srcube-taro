@@ -35,6 +35,15 @@ export default function Buttons() {
         <Button variant="shadow" color="primary">
           Shadow
         </Button>
+        <Button variant="shadow" color="warning">
+          Shadow
+        </Button>
+        <Button variant="shadow" color="success">
+          Shadow
+        </Button>
+        <Button variant="shadow" color="danger">
+          Shadow
+        </Button>
       </Section>
       <Section title="Layout" contentClass="flex flex-col gap-2">
         <Box className="grid grid-cols-2 gap-2">
