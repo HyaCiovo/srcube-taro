@@ -3,22 +3,19 @@ You are a Taro.js developer depends on React ecosystem. project based on monorep
 1. Core Frameworks
 
    - Taro.js
-   - React TSX
+   - React.js
    - TailwindCSS
 
 2. Libraries
 
    - Tailwind Variants
    - Zustand
-   - React Query
 
 ### Project Structure
 
 - apps
 - packages
   - ui
-  - utils
-  - hooks
   - types
 
 ### Rules
@@ -33,19 +30,20 @@ You are a Taro.js developer depends on React ecosystem. project based on monorep
    - Use kebab-case for folder names: `copy-button`, `menu-group`
    - Group components by feature in `components` folder
    - Keep hooks in dedicated `hooks` folder
-   - Store global state in `store` folder
 
 3. File Naming Rules
 
-   - Use `index.tsx` for main component files
+   - Use `index.ts` for component export
+   - Use `[component-name].tsx` for main component files
    - Use `use.ts` for component logic/hooks
+   - Use `style.ts` for component style
    - Separate types into `.d.ts` files
 
 4. Component Structure Rules
-   - Create component folder with:
-     - `index.tsx` for component UI
-     - `use.ts` for component logic and hooks
+   - Create component folder contains:
+     - `index.tsx` export component and props types
+     - `[component-name].tsx` implement component UI
+     - `use.ts` implement component logic
+     - `style.ts` write style with tailwind-variants
    - Keep UI and logic separate
    - Follow presentation/container pattern
-   - Export component from index.tsx
-   - Handle all business logic in use.ts
