@@ -45,7 +45,7 @@ export default function Buttons() {
           Shadow
         </Button>
       </Section>
-      <Section title="Layout" contentClass="flex flex-col gap-2">
+      <Section title="Layouts" contentClass="flex flex-col gap-2">
         <Box className="grid grid-cols-2 gap-2">
           <Button
             startContent={<View className="i-[teenyicons--button-solid]" />}
@@ -62,7 +62,7 @@ export default function Buttons() {
           BLOCK
         </Button>
       </Section>
-      <Section title="State" contentClass="grid grid-cols-2 gap-2">
+      <Section title="States" contentClass="grid grid-cols-2 gap-2">
         <Button color="default" loading>
           Loading
         </Button>

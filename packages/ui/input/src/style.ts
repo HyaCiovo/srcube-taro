@@ -7,7 +7,6 @@ export const input = tv({
       'px-3',
       'w-full min-w-0',
       'transition-all duration-200 ease-out',
-      // 'border border-solid',
       'outline-none',
       'bg-slate-50',
     ],
@@ -21,10 +20,7 @@ export const input = tv({
         wrapper: 'border-transparent bg-gray-100',
       },
       bordered: {
-        wrapper: 'border-gray-300',
-      },
-      underlined: {
-        wrapper: 'border-b-2 border-gray-300 rounded-none',
+        wrapper: 'border border-gray-300',
       },
     },
     size: {
@@ -56,16 +52,16 @@ export const input = tv({
     status: {
       default: {},
       primary: {
-        wrapper: 'border-primary-500',
+        wrapper: 'border-primary-500 bg-primary-50',
       },
       success: {
-        wrapper: 'border-success-500',
+        wrapper: 'border-success-500 bg-success-50',
       },
       warning: {
-        wrapper: 'border-warning-500',
+        wrapper: 'border-warning-500 bg-warning-50',
       },
-      error: {
-        wrapper: 'border-danger-500',
+      danger: {
+        wrapper: 'border-danger-500 bg-danger-50',
       },
     },
     disabled: {
@@ -77,7 +73,7 @@ export const input = tv({
   },
   defaultVariants: {
     size: 'md',
-    variant: 'bordered',
+    variant: 'flat',
     status: 'default',
   },
 })

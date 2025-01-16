@@ -1,11 +1,11 @@
-import { View } from '@tarojs/components'
+import { View, ViewProps } from '@tarojs/components'
 import cn from 'classnames'
 import { forwardRef } from 'react'
 import { useSpinner, type UseSpinnerProps } from './use'
 
 export interface SpinnerProps extends UseSpinnerProps {}
 
-const Spinner = forwardRef<HTMLDivElement, SpinnerProps>((props, ref) => {
+const Spinner = forwardRef<ViewProps, SpinnerProps>((props, ref) => {
   const { Component, domRef, label, getSpinnerProps, styles } =
     useSpinner(props)
 

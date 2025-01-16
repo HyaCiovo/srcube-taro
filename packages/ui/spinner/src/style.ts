@@ -38,10 +38,6 @@ export const spinner = tv({
         icon: 'text-primary-500',
         label: 'text-primary-500',
       },
-      secondary: {
-        icon: 'text-secondary-500',
-        label: 'text-secondary-500',
-      },
       success: {
         icon: 'text-success-500',
         label: 'text-success-500',
