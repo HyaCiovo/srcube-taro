@@ -8,6 +8,7 @@ tasks:
       persistent: true
     deps:
       - 'ui:dev'
+
   build-weapp:
     command: 'npm run build:weapp'
     deps:

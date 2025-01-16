@@ -24,6 +24,7 @@ You are a Taro.js developer depends on React ecosystem. project based on monorep
 
    - Reference to [NextUI Codebase](https://github.com/nextui-org/nextui) for code style
    - [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) for component design
+   - Every component should be a independent package.
 
 2. Folder Structure Rules
 
@@ -37,7 +38,6 @@ You are a Taro.js developer depends on React ecosystem. project based on monorep
    - Use `[component-name].tsx` for main component files
    - Use `use.ts` for component logic/hooks
    - Use `style.ts` for component style
-   - Separate types into `.d.ts` files
 
 4. Component Structure Rules
    - Create component folder contains:
@@ -47,3 +47,4 @@ You are a Taro.js developer depends on React ecosystem. project based on monorep
      - `style.ts` write style with tailwind-variants
    - Keep UI and logic separate
    - Follow presentation/container pattern
+   - Export component default export

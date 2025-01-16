@@ -1,0 +1,29 @@
+type: 'library'
+
+id: 'ui'
+
+tasks:
+  dev:
+    command: 'tsup --watch'
+    deps:
+      # Core
+      - 'core-plugins:dev'
+      # UI
+      - 'ui-layouts:dev'
+      - 'ui-button:dev'
+      - 'ui-input:dev'
+      - 'ui-spinner:dev'
+    options:
+      runInCI: false
+      persistent: true
+
+  build:
+    command: 'tsup --dts'
+    deps:
+      # Core
+      - 'core-plugins:build'
+      # UI
+      - 'ui-layouts:build'
+      - 'ui-button:build'
+      - 'ui-input:build'
+      - 'ui-spinner:build'

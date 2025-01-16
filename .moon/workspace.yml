@@ -20,5 +20,5 @@ vcs:
 # and cannot reference projects located outside the workspace boundary.
 projects:
   - 'apps/*'
-  - 'ents/*'
-  - 'packages/*'
+  - 'envs/*'
+  - 'packages/**/moon.yml'

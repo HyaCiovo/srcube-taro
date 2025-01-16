@@ -1,0 +1,23 @@
+{
+  "name": "@srcube-taro/ui",
+  "version": "0.0.1",
+  "description": "UI components",
+  "files": [
+    "dist"
+  ],
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./plugins": "./src/plugins.ts"
+  },
+  "dependencies": {
+    "@srcube-taro/layouts": "workspace:*",
+    "@srcube-taro/button": "workspace:*",
+    "@srcube-taro/input": "workspace:*",
+    "@srcube-taro/spinner": "workspace:*",
+    "@srcube-taro/plugins": "workspace:*"
+  },
+  "devDependencies": {
+    "@srcube-taro/ts-config": "workspace:*"
+  }
+}

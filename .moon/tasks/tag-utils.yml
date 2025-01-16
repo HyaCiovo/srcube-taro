@@ -1,0 +1,9 @@
+tasks:
+  dev:
+    command: 'tsup --watch'
+    options:
+      runInCI: false
+      persistent: true
+
+  build:
+    command: 'tsup --dts'

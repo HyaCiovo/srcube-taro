@@ -1,9 +1,10 @@
+import { Page } from '@/components/page'
 import { Section } from '@/components/section'
 import { Box, Stack } from '@srcube-taro/ui'
 
 export default function Buttons() {
   return (
-    <Box className="flex flex-col gap-4 py-4">
+    <Page>
       <Section title="Horizontal Stack" contentClass="">
         <Stack direction="horizontal" spacing="lg" justify="center">
           {Array.from({ length: 3 }).map((_, index) => (
@@ -18,6 +19,6 @@ export default function Buttons() {
           ))}
         </Stack>
       </Section>
-    </Box>
+    </Page>
   )
 }

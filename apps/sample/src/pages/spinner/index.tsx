@@ -1,9 +1,10 @@
+import { Page } from '@/components/page'
 import { Section } from '@/components/section'
-import { Box, Spinner } from '@srcube-taro/ui'
+import { Spinner } from '@srcube-taro/ui'
 
 export default function SpinnerDemo() {
   return (
-    <Box className="flex flex-col gap-4 py-4">
+    <Page>
       <Section
         title="Colors"
         contentClass="grid grid-cols-6 gap-4 justify-items-center"
@@ -31,6 +32,6 @@ export default function SpinnerDemo() {
         <Spinner color="warning" label="Loading" />
         <Spinner color="success" label="Loading" />
       </Section>
-    </Box>
+    </Page>
   )
 }

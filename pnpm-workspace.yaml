@@ -1,36 +1,37 @@
 packages:
   - apps/*
   - envs/*
-  - packages/*
+  - packages/**/*
 catalog:
-  "@babel/core": ^7.24.4
-  "@babel/plugin-proposal-class-properties": 7.14.5
-  "@babel/preset-react": ^7.24.1
-  "@babel/runtime": ^7.24.4
-  "@egoist/tailwindcss-icons": ^1.8.2
-  "@iconify/json": ^2.2.290
-  "@pmmmwh/react-refresh-webpack-plugin": ^0.5.5
-  "@tarojs/cli": 4.0.7
-  "@tarojs/components": 4.0.7
-  "@tarojs/helper": 4.0.7
-  "@tarojs/plugin-framework-react": 4.0.7
-  "@tarojs/plugin-platform-alipay": 4.0.7
-  "@tarojs/plugin-platform-h5": 4.0.7
-  "@tarojs/plugin-platform-harmony-hybrid": 4.0.7
-  "@tarojs/plugin-platform-jd": 4.0.7
-  "@tarojs/plugin-platform-qq": 4.0.7
-  "@tarojs/plugin-platform-swan": 4.0.7
-  "@tarojs/plugin-platform-tt": 4.0.7
-  "@tarojs/plugin-platform-weapp": 4.0.7
-  "@tarojs/react": 4.0.7
-  "@tarojs/runtime": 4.0.7
-  "@tarojs/shared": 4.0.7
-  "@tarojs/taro": 4.0.7
-  "@tarojs/taro-loader": 4.0.7
-  "@tarojs/webpack5-runner": 4.0.7
-  "@types/node": ^18
-  "@types/react": ^18.0.0
-  "@types/webpack-env": ^1.13.6
+  '@babel/core': ^7.24.4
+  '@babel/plugin-proposal-class-properties': 7.14.5
+  '@babel/preset-react': ^7.24.1
+  '@babel/runtime': ^7.24.4
+  '@egoist/tailwindcss-icons': ^1.8.2
+  '@iconify/json': ^2.2.290
+  '@pmmmwh/react-refresh-webpack-plugin': ^0.5.5
+  '@tarojs/cli': 4.0.7
+  '@tarojs/components': 4.0.7
+  '@tarojs/helper': 4.0.7
+  '@tarojs/plugin-framework-react': 4.0.7
+  '@tarojs/plugin-platform-alipay': 4.0.7
+  '@tarojs/plugin-platform-h5': 4.0.7
+  '@tarojs/plugin-platform-harmony-hybrid': 4.0.7
+  '@tarojs/plugin-platform-jd': 4.0.7
+  '@tarojs/plugin-platform-qq': 4.0.7
+  '@tarojs/plugin-platform-swan': 4.0.7
+  '@tarojs/plugin-platform-tt': 4.0.7
+  '@tarojs/plugin-platform-weapp': 4.0.7
+  '@tarojs/react': 4.0.7
+  '@tarojs/runtime': 4.0.7
+  '@tarojs/shared': 4.0.7
+  '@tarojs/taro': 4.0.7
+  '@tarojs/taro-loader': 4.0.7
+  '@tarojs/webpack5-runner': 4.0.7
+  '@types/node': ^18
+  '@types/react': ^18.0.0
+  '@types/react-dom': ^18.0.0
+  '@types/webpack-env': ^1.13.6
   babel-plugin-module-resolver: ^5.0.2
   babel-preset-taro: 4.0.7
   classnames: ^2.5.1

@@ -1,0 +1,22 @@
+{
+  "name": "@srcube-taro/plugins",
+  "version": "0.0.1",
+  "description": "Plugins for srcube-taro",
+  "files": [
+    "dist"
+  ],
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@egoist/tailwindcss-icons": "catalog:",
+    "@srcube-taro/utils-react": "workspace:*",
+    "@srcube-taro/utils-taro": "workspace:*",
+    "@srcube-taro/utils-tv": "workspace:*",
+    "@tarojs/components": "catalog:",
+    "react": "catalog:",
+    "tailwind-variants": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@srcube-taro/ts-config": "workspace:*"
+  }
+}

@@ -1,14 +1,14 @@
+import { Page } from '@/components/page'
 import { Section } from '@/components/section'
 import { Box, Button } from '@srcube-taro/ui'
 import { View } from '@tarojs/components'
 
 export default function Buttons() {
   return (
-    <Box className="flex flex-col gap-4 py-4">
+    <Page>
       <Section title="Colors" contentClass="grid grid-cols-3 gap-2">
         <Button>Default</Button>
         <Button color="primary">Primary</Button>
-        <Button color="secondary">Secondary</Button>
         <Button color="danger">Danger</Button>
         <Button color="warning">Warning</Button>
         <Button color="success">Success</Button>
@@ -70,6 +70,6 @@ export default function Buttons() {
           Disabled
         </Button>
       </Section>
-    </Box>
+    </Page>
   )
 }

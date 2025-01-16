@@ -1,3 +1,4 @@
+import { Page } from '@/components/page'
 import { Box, Stack } from '@srcube-taro/ui'
 import { useLoad } from '@tarojs/taro'
 import { Router } from 'tarojs-router-next'
@@ -24,13 +25,17 @@ export default function Index() {
       to: () => Router.toButtons(),
     },
     {
+      title: 'Inputs',
+      to: () => Router.toInputs(),
+    },
+    {
       title: 'Spinner',
       to: () => Router.toSpinner(),
     },
   ]
 
   return (
-    <Box className="space-y-4 p-4 bg-gray-100">
+    <Page className="space-y-4">
       <Box className="text-xs font-bold uppercase">Layouts</Box>
       <Stack direction="vertical">
         {layouts.map((link) => (
@@ -57,6 +62,6 @@ export default function Index() {
           </Box>
         ))}
       </Stack>
-    </Box>
+    </Page>
   )
 }

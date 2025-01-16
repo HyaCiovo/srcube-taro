@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "React",
-  "extends": "./_.json",
+  "extends": "./_",
   "compilerOptions": {
     "declaration": true,
     "moduleResolution": "node",

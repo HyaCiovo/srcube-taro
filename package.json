@@ -5,7 +5,14 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {},
+  "scripts": {
+    "clean": "moon clean"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "tsup": "catalog:"
+  },
   "packageManager": "pnpm@9.15.1",
   "engines": {
     "node": "18.20.5"

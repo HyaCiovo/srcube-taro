@@ -5,6 +5,7 @@ export default defineAppConfig({
     'pages/layout-stack/index',
     'pages/buttons/index',
     'pages/spinner/index',
+    'pages/inputs/index',
   ],
   window: {
     backgroundTextStyle: 'light',

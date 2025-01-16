@@ -39,7 +39,7 @@ export default defineConfig<'webpack5'>(
       mini: {
         compile: {
           // @ts-ignore
-          include: [() => '@srcube-taro/ui'],
+          include: [() => '@srcube-taro/*'],
         },
         postcss: {
           pxtransform: {

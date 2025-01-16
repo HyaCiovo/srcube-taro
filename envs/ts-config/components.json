@@ -1,0 +1,9 @@
+{
+  "extends": "./react",
+  "name": "Components",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "outDir": "dist"
+  }
+}
