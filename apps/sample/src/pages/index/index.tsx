@@ -1,7 +1,9 @@
 import { Page } from '@/components/page'
 import { Box, Stack } from '@srcube-taro/ui'
+import { Image } from '@tarojs/components'
 import { useLoad } from '@tarojs/taro'
 import { Router } from 'tarojs-router-next'
+import Logo from '@/assets/imgs/srcube.png'
 
 export default function Index() {
   useLoad(() => {
@@ -36,6 +38,7 @@ export default function Index() {
 
   return (
     <Page className="space-y-4">
+      <Box className="text-xl font-bold text-center">Srcube UI</Box>
       <Box className="text-xs font-bold uppercase">Layouts</Box>
       <Stack direction="vertical">
         {layouts.map((link) => (
@@ -62,6 +65,9 @@ export default function Index() {
           </Box>
         ))}
       </Stack>
+      <Box className="fixed bottom-8 left-0 right-0 flex justify-center items-center">
+        <Image src={Logo} className="size-8" />
+      </Box>
     </Page>
   )
 }
