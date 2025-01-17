@@ -20,7 +20,7 @@ export const input = tv({
         wrapper: 'border-transparent bg-gray-100',
       },
       bordered: {
-        wrapper: 'border border-gray-300',
+        wrapper: 'border-2 border-gray-300',
       },
     },
     size: {

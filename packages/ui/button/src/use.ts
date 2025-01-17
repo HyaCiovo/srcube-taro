@@ -6,7 +6,7 @@ import {
   type ButtonProps as NativeButtonProps,
 } from '@tarojs/components'
 import { ReactNode, useCallback, useMemo } from 'react'
-import { button, buttonHover, ButtonVariantProps } from './style'
+import { button, buttonHover, type ButtonVariantProps } from './style'
 
 interface Props {
   /**

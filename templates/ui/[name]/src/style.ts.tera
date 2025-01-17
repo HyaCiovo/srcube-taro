@@ -1,0 +1,11 @@
+---
+to: '{{ name }}/src/style.ts'
+---
+
+import { tv, type VariantProps }from 'tailwind-variants'
+
+export const {{ name }} = tv({
+  base: [],
+})
+
+export type {{ name | capitalize }}VariantProps = VariantProps<typeof {{ name }}>
