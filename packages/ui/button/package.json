@@ -6,6 +6,9 @@
     "dist"
   ],
   "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@srcube-taro/spinner": "workspace:*",
     "@srcube-taro/utils-taro": "workspace:*",

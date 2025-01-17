@@ -7,3 +7,8 @@ tasks:
 
   build:
     command: 'tsup --dts'
+
+  publish:
+    command: 'pnpm publish --access public'
+    deps:
+      - build

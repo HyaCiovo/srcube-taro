@@ -6,6 +6,9 @@
     "dist"
   ],
   "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@tarojs/components": "catalog:",
     "tailwind-variants": "catalog:"

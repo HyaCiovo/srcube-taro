@@ -2,6 +2,9 @@ type: 'library'
 
 id: 'ui'
 
+tags:
+  - 'lib'
+
 tasks:
   dev:
     command: 'tsup --watch'

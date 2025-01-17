@@ -10,6 +10,9 @@ to: '{{ name }}/package.json'
     "dist"
   ],
   "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@srcube-taro/utils-taro": "workspace:*",
     "@srcube-taro/utils-react": "workspace:*",
