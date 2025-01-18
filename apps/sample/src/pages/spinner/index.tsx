@@ -11,7 +11,6 @@ export default function SpinnerDemo() {
       >
         <Spinner color="default" />
         <Spinner color="primary" />
-        <Spinner color="secondary" />
         <Spinner color="danger" />
         <Spinner color="warning" />
         <Spinner color="success" />
@@ -27,7 +26,6 @@ export default function SpinnerDemo() {
       <Section title="Label" contentClass="grid grid-cols-3 gap-2">
         <Spinner color="default" label="Loading" />
         <Spinner color="primary" label="Loading" />
-        <Spinner color="secondary" label="Loading" />
         <Spinner color="danger" label="Loading" />
         <Spinner color="warning" label="Loading" />
         <Spinner color="success" label="Loading" />

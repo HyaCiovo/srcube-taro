@@ -23,6 +23,10 @@ export default function Index() {
 
   const components = [
     {
+      title: 'Avatars',
+      to: () => Router.toAvatars(),
+    },
+    {
       title: 'Buttons',
       to: () => Router.toButtons(),
     },

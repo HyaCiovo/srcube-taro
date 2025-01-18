@@ -3,6 +3,7 @@ export default defineAppConfig({
     'pages/index/index',
     'pages/layout-box/index',
     'pages/layout-stack/index',
+    'pages/avatars/index',
     'pages/buttons/index',
     'pages/spinner/index',
     'pages/inputs/index',

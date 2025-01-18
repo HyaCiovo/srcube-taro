@@ -19,7 +19,6 @@ type SrcubeUIPluginConfig = {
 
 const defaultColors = {
   primary: colors.blue,
-  secondary: colors.pink,
   info: colors.sky,
   success: colors.green,
   warning: colors.yellow,

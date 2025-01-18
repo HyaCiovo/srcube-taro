@@ -1,6 +1,6 @@
-import { NativeProps } from '@srcube-taro/utils-taro'
-import { SlotsToClasses } from '@srcube-taro/utils-tv'
 import { type ReactRef } from '@srcube-taro/utils-react'
+import { type NativeProps } from '@srcube-taro/utils-taro'
+import { type SlotsToClasses } from '@srcube-taro/utils-tv'
 import {
   Input as NativeInput,
   type InputProps as NativeInputProps,

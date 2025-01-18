@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@srcube-taro/layouts": "workspace:*",
+    "@srcube-taro/avatar": "workspace:*",
     "@srcube-taro/button": "workspace:*",
     "@srcube-taro/input": "workspace:*",
     "@srcube-taro/spinner": "workspace:*",

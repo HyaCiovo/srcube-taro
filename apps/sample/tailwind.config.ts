@@ -1,10 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { SrcubeUI } from '@srcube-taro/ui/plugins'
-import {
-  iconsPlugin,
-  dynamicIconsPlugin,
-  getIconCollections,
-} from '@egoist/tailwindcss-icons'
+import { dynamicIconsPlugin } from '@egoist/tailwindcss-icons'
 import colors from 'tailwindcss/colors'
 
 export default {
