@@ -84,6 +84,14 @@ packages/ui/[component]/
 └── README.md
 ```
 
+## Docs
+
+Coming soon...
+
+## Preview
+
+<img src="./meta/weapp-qr-code.jpg" alt="Srcube Taro UI" width="150" />
+
 ## License
 
 MIT
