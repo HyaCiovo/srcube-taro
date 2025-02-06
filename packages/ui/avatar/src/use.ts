@@ -1,7 +1,12 @@
 import { type ReactRef } from '@srcube-taro/utils-react'
 import { type NativeProps } from '@srcube-taro/utils-taro'
 import { type SlotsToClasses } from '@srcube-taro/utils-tv'
-import { type ImageProps, View, type ViewProps } from '@tarojs/components'
+import {
+  BaseEventOrig,
+  type ImageProps,
+  View,
+  type ViewProps,
+} from '@tarojs/components'
 import cn from 'classnames'
 import { useCallback, useMemo } from 'react'
 import { avatar, type AvatarSlots, type AvatarVariantProps } from './style'
@@ -34,7 +39,10 @@ interface Props {
 }
 
 export type UseAvatarProps = Props &
-  Omit<NativeProps<ViewProps>, keyof AvatarVariantProps | 'children'> &
+  Omit<
+    NativeProps<ViewProps & ImageProps>,
+    keyof AvatarVariantProps | 'children'
+  > &
   AvatarVariantProps
 
 export function useAvatar(props: UseAvatarProps) {
@@ -48,6 +56,8 @@ export function useAvatar(props: UseAvatarProps) {
     fallback,
     className,
     classNames,
+    onError,
+    onLoad,
     ...rest
   } = props
 
@@ -66,6 +76,20 @@ export function useAvatar(props: UseAvatarProps) {
       img: cn(slots.img({ class: classNames?.img })),
     }
   }, [size, radius, className, classNames])
+
+  const handleImageError = useCallback(
+    (error: BaseEventOrig<ImageProps.onErrorEventDetail>) => {
+      onError?.(error)
+    },
+    [onError],
+  )
+
+  const handleImageLoad = useCallback(
+    (load: BaseEventOrig<ImageProps.onLoadEventDetail>) => {
+      onLoad?.(load)
+    },
+    [onLoad],
+  )
 
   const getFallback = useCallback(() => {
     if (fallback) return fallback
@@ -87,8 +111,10 @@ export function useAvatar(props: UseAvatarProps) {
       src,
       className: styles.img,
       mode: 'aspectFit' as unknown as ImageProps['mode'],
+      onError: handleImageError,
+      onLoad: handleImageLoad,
     }
-  }, [src, styles.img])
+  }, [src, styles.img, handleImageError, handleImageLoad])
 
   return {
     Component,

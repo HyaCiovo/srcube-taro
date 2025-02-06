@@ -8,6 +8,10 @@
   "scripts": {
     "clean": "moon clean"
   },
+  "dependencies": {
+    "tailwindcss": "catalog:",
+    "weapp-tailwindcss": "catalog:"
+  },
   "devDependencies": {
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",

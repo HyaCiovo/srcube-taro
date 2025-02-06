@@ -5,11 +5,19 @@ import { useInput, UseInputProps } from './use'
 export interface InputProps extends UseInputProps {}
 
 const Input = forwardRef<NativeInputProps, InputProps>((props, ref) => {
-  const { Component, domRef, styles, startContent, endContent, getInputProps } =
-    useInput({
-      ...props,
-      ref,
-    })
+  const {
+    Component,
+    ClearButton,
+    domRef,
+    styles,
+    startContent,
+    endContent,
+    getInputProps,
+    getClearButtonProps,
+  } = useInput({
+    ...props,
+    ref,
+  })
 
   return (
     <View className={styles.wrapper}>
@@ -17,6 +25,10 @@ const Input = forwardRef<NativeInputProps, InputProps>((props, ref) => {
         <View className={styles.startContent}>{startContent}</View>
       )}
       <Component ref={domRef} className={styles.input} {...getInputProps()} />
+      <View
+        className="i-[flowbite--close-circle-solid] opacity-20"
+        {...getClearButtonProps}
+      />
       {endContent && <View className={styles.endContent}>{endContent}</View>}
     </View>
   )

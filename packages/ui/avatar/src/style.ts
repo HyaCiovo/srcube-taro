@@ -12,16 +12,16 @@ export const avatar = tv({
   variants: {
     size: {
       xs: {
-        wrapper: 'size-6 text-xs',
+        wrapper: 'size-8 text-xs',
       },
       sm: {
-        wrapper: 'size-8 text-sm',
+        wrapper: 'size-10 text-sm',
       },
       md: {
-        wrapper: 'size-10 text-base',
+        wrapper: 'size-12 text-base',
       },
       lg: {
-        wrapper: 'size-14 text-lg',
+        wrapper: 'size-16 text-lg',
       },
     },
     radius: {

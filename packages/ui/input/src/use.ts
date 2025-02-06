@@ -1,3 +1,4 @@
+import { Button } from '@srcube-taro/button'
 import { type ReactRef } from '@srcube-taro/utils-react'
 import { type NativeProps } from '@srcube-taro/utils-taro'
 import { type SlotsToClasses } from '@srcube-taro/utils-tv'
@@ -48,6 +49,7 @@ export function useInput(props: UseInputProps) {
   } = props
 
   const Component = NativeInput
+  const ClearButton = Button
 
   const slots = useMemo(
     () => input({ variant, size, status, disabled, className }),
@@ -72,13 +74,21 @@ export function useInput(props: UseInputProps) {
     }
   }, [disabled, rest])
 
+  const getClearButtonProps = useCallback(() => {
+    return {
+      // className: 'i-[flowbite--close-circle-solid] opacity-20',
+    }
+  }, [])
+
   return {
     Component,
+    ClearButton,
     domRef: ref,
     styles,
     startContent,
     endContent,
     getInputProps,
+    getClearButtonProps,
   }
 }
 

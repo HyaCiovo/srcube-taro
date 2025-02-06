@@ -6,7 +6,12 @@
 # node
 node_modules
 
+# build
 dist
+.next
+
+# velite
+.velite
 
 # Taro
 deploy_versions

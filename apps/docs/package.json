@@ -26,6 +26,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "catalog:",
     "@tailwindcss/typography": "catalog:",
+    "autoprefixer": "catalog:",
     "typescript": "catalog:",
     "velite": "catalog:"
   }

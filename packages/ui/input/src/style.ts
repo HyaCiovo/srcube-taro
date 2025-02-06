@@ -11,6 +11,7 @@ export const input = tv({
       'bg-slate-50',
     ],
     input: ['w-full h-full', 'bg-transparent', 'border-none outline-none'],
+    clearButton: [''],
     startContent: 'flex-shrink-0 flex items-center justify-center',
     endContent: 'flex-shrink-0 flex items-center justify-center',
   },

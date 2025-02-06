@@ -1,5 +1,5 @@
 import { Image, Text, type ViewProps } from '@tarojs/components'
-import { forwardRef, useMemo } from 'react'
+import { forwardRef, memo, useMemo } from 'react'
 import { useAvatar, type UseAvatarProps } from './use'
 
 export interface AvatarProps extends UseAvatarProps {}
@@ -26,4 +26,4 @@ const Avatar = forwardRef<ViewProps, AvatarProps>((props, ref) => {
 
 Avatar.displayName = 'Srcube.Avatar'
 
-export default Avatar
+export default memo(Avatar)

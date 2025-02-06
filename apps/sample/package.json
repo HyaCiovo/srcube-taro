@@ -59,7 +59,7 @@
     "react-dom": "catalog:",
     "tailwind-variants": "catalog:",
     "tailwindcss": "catalog:",
-    "tarojs-router-next": "^3.4.6",
+    "tarojs-router-next": "catalog:",
     "weapp-tailwindcss": "catalog:"
   },
   "devDependencies": {
@@ -83,7 +83,7 @@
     "postcss": "catalog:",
     "react-refresh": "catalog:",
     "stylelint": "catalog:",
-    "tarojs-router-next-plugin": "^3.4.6",
+    "tarojs-router-next-plugin": "catalog:",
     "tsconfig-paths-webpack-plugin": "catalog:",
     "typescript": "catalog:",
     "webpack": "catalog:"
