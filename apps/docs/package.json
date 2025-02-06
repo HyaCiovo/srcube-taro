@@ -1,0 +1,32 @@
+{
+  "name": "@srcube-taro/docs",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "content:dev": "velite --watch",
+    "content:build": "velite --clean"
+  },
+  "dependencies": {
+    "@srcube-taro/ts-config": "workspace:*",
+    "classnames": "catalog:",
+    "dayjs": "catalog:",
+    "nanoid": "catalog:",
+    "next": "catalog:",
+    "next-themes": "catalog:",
+    "postcss": "catalog:",
+    "prism-react-renderer": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "catalog:",
+    "@tailwindcss/typography": "catalog:",
+    "typescript": "catalog:",
+    "velite": "catalog:"
+  }
+}
