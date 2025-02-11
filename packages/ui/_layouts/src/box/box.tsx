@@ -1,11 +1,12 @@
-import { type ViewProps } from '@tarojs/components'
+import type { ViewProps } from '@tarojs/components'
+import type { UseBoxProps } from './use'
 import { forwardRef } from 'react'
-import { useBox, UseBoxProps } from './use'
+import { useBox } from './use'
 
-export interface BoxProps extends UseBoxProps {}
+export interface BoxProps extends UseBoxProps { }
 
 const Box = forwardRef<ViewProps, BoxProps>((props: UseBoxProps, ref) => {
-  const { Component, domRef, children, getBoxProps } = useBox(props)
+  const { Component, domRef, children, getBoxProps } = useBox({ ...props, ref })
 
   return (
     <Component ref={domRef} {...getBoxProps()}>

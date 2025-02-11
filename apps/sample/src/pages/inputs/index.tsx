@@ -31,9 +31,7 @@ export default function Buttons() {
       <Section title="Layouts" contentClass="flex flex-col gap-2">
         <Input
           startContent={<Box className="i-[tabler--shield-lock-filled]" />}
-          endContent={
-            <Box className="i-[flowbite--close-circle-solid] opacity-20" />
-          }
+          endContent={<Box className="i-[flowbite--close-circle-solid] opacity-20" />}
         />
       </Section>
     </Page>

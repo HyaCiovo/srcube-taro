@@ -1,13 +1,14 @@
-import { View, type InputProps as NativeInputProps } from '@tarojs/components'
+import type { InputProps as NativeInputProps } from '@tarojs/components'
+import type { UseInputProps } from './use'
+import { View } from '@tarojs/components'
 import { forwardRef } from 'react'
-import { useInput, UseInputProps } from './use'
+import { useInput } from './use'
 
 export interface InputProps extends UseInputProps {}
 
 const Input = forwardRef<NativeInputProps, InputProps>((props, ref) => {
   const {
     Component,
-    ClearButton,
     domRef,
     styles,
     startContent,
@@ -21,14 +22,9 @@ const Input = forwardRef<NativeInputProps, InputProps>((props, ref) => {
 
   return (
     <View className={styles.wrapper}>
-      {startContent && (
-        <View className={styles.startContent}>{startContent}</View>
-      )}
+      {startContent && <View className={styles.startContent}>{startContent}</View>}
       <Component ref={domRef} className={styles.input} {...getInputProps()} />
-      <View
-        className="i-[flowbite--close-circle-solid] opacity-20"
-        {...getClearButtonProps}
-      />
+      <View className="i-[flowbite--close-circle-solid] opacity-20" {...getClearButtonProps} />
       {endContent && <View className={styles.endContent}>{endContent}</View>}
     </View>
   )

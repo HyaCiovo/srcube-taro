@@ -1,6 +1,6 @@
 import { Page } from '@/components/page'
 import { Section } from '@/components/section'
-import { Box, Avatar } from '@srcube-taro/ui'
+import { Avatar } from '@srcube-taro/ui'
 import avatar from './avatar.png'
 
 export default function Buttons() {

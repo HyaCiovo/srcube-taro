@@ -1,13 +1,13 @@
-type: 'library'
+type: library
 
-id: 'ui'
+id: ui
 
 tags:
-  - 'lib'
+  - lib
 
 tasks:
   dev:
-    command: 'tsup --watch'
+    command: tsup --watch
     deps:
       # Core
       - 'core-plugins:dev'
@@ -22,7 +22,7 @@ tasks:
       persistent: true
 
   build:
-    command: 'tsup --dts'
+    command: tsup --dts
     deps:
       # Core
       - 'core-plugins:build'

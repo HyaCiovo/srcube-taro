@@ -1,28 +1,27 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "module": "esnext",
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
-    "rootDir": ".",
     "jsx": "react-jsx",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "typeRoots": ["node_modules/@types"],
+    "experimentalDecorators": true,
+    "rootDir": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
     "paths": {
-      // TS5090 leading './'
       "@/*": ["./src/*"],
       "tailwind-variants": ["./node_modules/tailwind-variants"]
-    }
+    },
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types"],
+    "allowJs": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "lib",
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./src", "./types", "./config"],
   "compileOnSave": false

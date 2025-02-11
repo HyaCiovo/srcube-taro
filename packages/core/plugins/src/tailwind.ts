@@ -1,6 +1,5 @@
-import plugin from 'tailwindcss/plugin'
 import colors from 'tailwindcss/colors'
-import { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 export interface ThemeColors {
   primary: Record<string, string>
@@ -10,9 +9,9 @@ export interface ThemeColors {
   error: Record<string, string>
 }
 
-type Themes = { colors?: Partial<ThemeColors> }
+interface Themes { colors?: Partial<ThemeColors> }
 
-type SrcubeUIPluginConfig = {
+interface SrcubeUIPluginConfig {
   prefix?: string
   themes?: Themes
 }
@@ -25,21 +24,23 @@ const defaultColors = {
   danger: colors.red,
 }
 
-const convertColors = (prefix: string, colors: Record<string, unknown>) =>
-  Object.entries(colors).reduce((acc, [key, value]) => {
+function convertColors(prefix: string, colors: Record<string, unknown>) {
+  return Object.entries(colors).reduce((acc, [key, value]) => {
     // Contains color shades
     if (typeof value === 'object' && value !== null) {
       Object.entries(value).forEach(([shade, color]) => {
         acc[`--${prefix}-${key}-${shade}`] = color
       })
-    } else {
+    }
+    else {
       // Normal color value
       acc[`--${prefix}-${key}`] = value
     }
     return acc
   }, {})
+}
 
-const SrcubeUI = (config: SrcubeUIPluginConfig = {}) => {
+function SrcubeUI(config: SrcubeUIPluginConfig = {}) {
   const { prefix = 'srcube', themes = {} } = config
 
   return plugin(

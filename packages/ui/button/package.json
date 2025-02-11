@@ -2,17 +2,17 @@
   "name": "@srcube-taro/button",
   "version": "0.0.1",
   "description": "Button component",
+  "main": "src/index.ts",
   "files": [
     "dist"
   ],
-  "main": "src/index.ts",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "@srcube-taro/spinner": "workspace:*",
-    "@srcube-taro/utils-taro": "workspace:*",
     "@srcube-taro/utils-react": "workspace:*",
+    "@srcube-taro/utils-taro": "workspace:*",
     "@srcube-taro/utils-tv": "workspace:*",
     "@tarojs/components": "catalog:",
     "react": "catalog:",

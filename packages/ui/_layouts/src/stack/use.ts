@@ -1,8 +1,10 @@
-import { ReactRef } from '@srcube-taro/utils-react'
-import { type NativeProps } from '@srcube-taro/utils-taro'
-import { View, type ViewProps } from '@tarojs/components'
+import type { ReactRef } from '@srcube-taro/utils-react'
+import type { NativeProps } from '@srcube-taro/utils-taro'
+import type { ViewProps } from '@tarojs/components'
+import type { StackVariantsProps } from './style'
+import { View } from '@tarojs/components'
 import { useCallback, useMemo } from 'react'
-import { stack, type StackVariantsProps } from './style'
+import { stack } from './style'
 
 interface Props {
   ref?: ReactRef<ViewProps>
@@ -17,16 +19,7 @@ export type UseStackProps = Props &
   StackVariantsProps
 
 export function useStack(props: UseStackProps) {
-  const {
-    ref,
-    className,
-    children,
-    direction,
-    spacing,
-    align,
-    justify,
-    ...rest
-  } = props
+  const { ref, className, children, direction, spacing, align, justify, ...rest } = props
 
   const Component = View
 

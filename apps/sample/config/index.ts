@@ -1,4 +1,5 @@
-import { defineConfig, type UserConfigExport } from '@tarojs/cli'
+import type { UserConfigExport } from '@tarojs/cli'
+import { defineConfig } from '@tarojs/cli'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack'
 
@@ -7,8 +8,7 @@ import prodConfig from './prod'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'webpack5'>(
-  // @ts-ignore
-  async (merge, { command, mode }) => {
+  async (merge) => {
     const baseConfig: UserConfigExport<'webpack5'> = {
       projectName: 'sample',
       designWidth: 750,
@@ -38,7 +38,7 @@ export default defineConfig<'webpack5'>(
       },
       mini: {
         compile: {
-          // @ts-ignore
+          // @ts-expect-error Taro internal type error
           include: [() => '@srcube-taro/*'],
         },
         postcss: {

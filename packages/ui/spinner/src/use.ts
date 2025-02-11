@@ -1,10 +1,13 @@
-import { ReactRef } from '@srcube-taro/utils-react'
-import { NativeProps } from '@srcube-taro/utils-taro'
-import { SlotsToClasses } from '@srcube-taro/utils-tv'
-import { View, type ViewProps } from '@tarojs/components'
+import type { ReactRef } from '@srcube-taro/utils-react'
+import type { NativeProps } from '@srcube-taro/utils-taro'
+import type { SlotsToClasses } from '@srcube-taro/utils-tv'
+import type { ViewProps } from '@tarojs/components'
+import type { ReactNode } from 'react'
+import type { SpinnerSlots, SpinnerVariantProps } from './style'
+import { View } from '@tarojs/components'
 import cn from 'classnames'
-import { useMemo, type ReactNode } from 'react'
-import { spinner, SpinnerSlots, SpinnerVariantProps } from './style'
+import { useMemo } from 'react'
+import { spinner } from './style'
 
 interface Props {
   /**
@@ -25,15 +28,12 @@ export type UseSpinnerProps = Props &
   Omit<NativeProps<ViewProps>, keyof SpinnerVariantProps> &
   SpinnerVariantProps
 
-export const useSpinner = (props: UseSpinnerProps) => {
+export function useSpinner(props: UseSpinnerProps) {
   const { ref, size, color, label, className, classNames, ...rest } = props
 
   const Component = View
 
-  const slots = useMemo(
-    () => spinner({ size, color, className }),
-    [size, color, className],
-  )
+  const slots = useMemo(() => spinner({ size, color, className }), [size, color, className])
 
   const styles = useMemo(
     () => ({
@@ -41,7 +41,7 @@ export const useSpinner = (props: UseSpinnerProps) => {
       icon: cn(slots.icon({ class: classNames?.icon })),
       label: cn(slots.label({ class: classNames?.label })),
     }),
-    [className, classNames],
+    [className, classNames, slots],
   )
 
   const getSpinnerProps = () => ({

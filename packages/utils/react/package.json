@@ -2,10 +2,10 @@
   "name": "@srcube-taro/utils-react",
   "version": "0.0.1",
   "description": "React utils",
+  "main": "src/index.ts",
   "files": [
     "dist"
   ],
-  "main": "src/index.ts",
   "publishConfig": {
     "access": "public"
   },

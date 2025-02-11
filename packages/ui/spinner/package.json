@@ -2,16 +2,16 @@
   "name": "@srcube-taro/spinner",
   "version": "0.0.1",
   "description": "Spinner component",
+  "main": "src/index.ts",
   "files": [
     "dist"
   ],
-  "main": "src/index.ts",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@srcube-taro/utils-taro": "workspace:*",
     "@srcube-taro/utils-react": "workspace:*",
+    "@srcube-taro/utils-taro": "workspace:*",
     "@srcube-taro/utils-tv": "workspace:*",
     "@tarojs/components": "catalog:",
     "classnames": "catalog:",

@@ -1,8 +1,8 @@
-import { type StandardProps } from '@tarojs/components'
+import type { StandardProps } from '@tarojs/components'
 
 export type NativeProps<T extends StandardProps = StandardProps> = Omit<
   T,
-  'onClick' | 'onLongClick'
+'onClick' | 'onLongClick'
 > & {
   onTap?: T['onClick']
   onLongTap?: T['onLongClick']

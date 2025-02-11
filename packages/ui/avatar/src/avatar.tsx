@@ -1,6 +1,8 @@
-import { Image, Text, type ViewProps } from '@tarojs/components'
+import type { ViewProps } from '@tarojs/components'
+import type { UseAvatarProps } from './use'
+import { Image, Text } from '@tarojs/components'
 import { forwardRef, memo, useMemo } from 'react'
-import { useAvatar, type UseAvatarProps } from './use'
+import { useAvatar } from './use'
 
 export interface AvatarProps extends UseAvatarProps {}
 
@@ -11,10 +13,11 @@ const Avatar = forwardRef<ViewProps, AvatarProps>((props, ref) => {
   })
 
   const fallback = useMemo(() => {
-    if (!props.fallback) return <></>
+    if (!props.fallback)
+      return <></>
 
     return <Text>{props.name}</Text>
-  }, [props.name])
+  }, [props.name, props.fallback])
 
   return (
     <Component {...getAvatarProps()}>

@@ -1,15 +1,12 @@
-import { type ReactRef } from '@srcube-taro/utils-react'
-import { type NativeProps } from '@srcube-taro/utils-taro'
-import { type SlotsToClasses } from '@srcube-taro/utils-tv'
-import {
-  BaseEventOrig,
-  type ImageProps,
-  View,
-  type ViewProps,
-} from '@tarojs/components'
+import type { ReactRef } from '@srcube-taro/utils-react'
+import type { NativeProps } from '@srcube-taro/utils-taro'
+import type { SlotsToClasses } from '@srcube-taro/utils-tv'
+import type { BaseEventOrig, ImageProps, ViewProps } from '@tarojs/components'
+import type { AvatarSlots, AvatarVariantProps } from './style'
+import { View } from '@tarojs/components'
 import cn from 'classnames'
 import { useCallback, useMemo } from 'react'
-import { avatar, type AvatarSlots, type AvatarVariantProps } from './style'
+import { avatar } from './style'
 
 interface Props {
   /**
@@ -39,10 +36,7 @@ interface Props {
 }
 
 export type UseAvatarProps = Props &
-  Omit<
-    NativeProps<ViewProps & ImageProps>,
-    keyof AvatarVariantProps | 'children'
-  > &
+  Omit<NativeProps<ViewProps & ImageProps>, keyof AvatarVariantProps | 'children'> &
   AvatarVariantProps
 
 export function useAvatar(props: UseAvatarProps) {
@@ -75,7 +69,7 @@ export function useAvatar(props: UseAvatarProps) {
       wrapper: cn(slots.wrapper({ class: classNames?.wrapper }), className),
       img: cn(slots.img({ class: classNames?.img })),
     }
-  }, [size, radius, className, classNames])
+  }, [className, classNames, slots])
 
   const handleImageError = useCallback(
     (error: BaseEventOrig<ImageProps.onErrorEventDetail>) => {
@@ -92,8 +86,10 @@ export function useAvatar(props: UseAvatarProps) {
   )
 
   const getFallback = useCallback(() => {
-    if (fallback) return fallback
-    if (name) return name.charAt(0).toUpperCase()
+    if (fallback)
+      return fallback
+    if (name)
+      return name.charAt(0).toUpperCase()
     return null
   }, [fallback, name])
 
@@ -103,7 +99,7 @@ export function useAvatar(props: UseAvatarProps) {
       className: styles.wrapper,
       ...rest,
     }
-  }, [styles.wrapper, rest])
+  }, [styles.wrapper, ref, rest])
 
   const getImageProps = useCallback(() => {
     return {
@@ -114,7 +110,7 @@ export function useAvatar(props: UseAvatarProps) {
       onError: handleImageError,
       onLoad: handleImageLoad,
     }
-  }, [src, styles.img, handleImageError, handleImageLoad])
+  }, [src, styles.img, imgRef, handleImageError, handleImageLoad])
 
   return {
     Component,

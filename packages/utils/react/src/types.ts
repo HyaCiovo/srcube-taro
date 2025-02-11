@@ -1,6 +1,3 @@
-import * as React from 'react'
+import type * as React from 'react'
 
-export type ReactRef<T> =
-  | React.RefObject<T>
-  | React.MutableRefObject<T>
-  | React.Ref<T>
+export type ReactRef<T> = React.RefObject<T> | React.MutableRefObject<T> | React.Ref<T>

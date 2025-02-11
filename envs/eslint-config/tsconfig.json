@@ -1,0 +1,13 @@
+{
+  "extends": "@srcube-taro/ts-config/_",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": ["./node_modules/typescript-eslint"],
+    "declaration": true,
+    "outDir": "./dist",
+    "verbatimModuleSyntax": true
+  }
+}

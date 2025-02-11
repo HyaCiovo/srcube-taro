@@ -9,6 +9,7 @@
     "css": "None",
     "framework": "React"
   },
+  "author": "",
   "scripts": {
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
@@ -33,7 +34,6 @@
     "defaults and fully supports es6-module",
     "maintained node versions"
   ],
-  "author": "",
   "dependencies": {
     "@babel/runtime": "catalog:",
     "@iconify/json": "catalog:",
@@ -53,8 +53,10 @@
     "@tarojs/runtime": "catalog:",
     "@tarojs/shared": "catalog:",
     "@tarojs/taro": "catalog:",
+    "autoprefixer": "catalog:",
     "classnames": "catalog:",
     "less": "catalog:",
+    "nanoid": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
     "tailwind-variants": "catalog:",

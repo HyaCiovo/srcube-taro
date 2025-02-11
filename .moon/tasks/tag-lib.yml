@@ -1,14 +1,14 @@
 tasks:
   dev:
-    command: 'tsup --watch'
+    command: tsup --watch
     options:
       runInCI: false
       persistent: true
 
   build:
-    command: 'tsup --dts'
+    command: tsup --dts
 
   publish:
-    command: 'pnpm publish --access public'
+    command: pnpm publish --access public
     deps:
       - build

@@ -1,8 +1,10 @@
-import { ReactRef } from '@srcube-taro/utils-react'
-import { type NativeProps } from '@srcube-taro/utils-taro'
-import { View, type ViewProps } from '@tarojs/components'
+import type { ReactRef } from '@srcube-taro/utils-react'
+import type { NativeProps } from '@srcube-taro/utils-taro'
+import type { ViewProps } from '@tarojs/components'
+import type { BoxVariantsProps } from './style'
+import { View } from '@tarojs/components'
 import { useCallback, useMemo } from 'react'
-import { box, type BoxVariantsProps } from './style'
+import { box } from './style'
 
 interface Props {
   ref?: ReactRef<ViewProps>
@@ -27,10 +29,11 @@ export function useBox(props: UseBoxProps) {
 
   const getBoxProps = useCallback(() => {
     return {
+      ref,
       className: styles,
       ...rest,
     }
-  }, [styles, ref])
+  }, [styles, ref, rest])
 
   return {
     Component,

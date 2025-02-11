@@ -11,10 +11,13 @@
     "module": "esnext",
     "target": "ES2022",
     "moduleDetection": "force",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "noImplicitAny": true,
+    "allowArbitraryExtensions": true
   }
 }

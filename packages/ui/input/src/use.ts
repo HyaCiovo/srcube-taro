@@ -1,14 +1,14 @@
+import type { ReactRef } from '@srcube-taro/utils-react'
+import type { NativeProps } from '@srcube-taro/utils-taro'
+import type { SlotsToClasses } from '@srcube-taro/utils-tv'
+import type { InputProps as NativeInputProps } from '@tarojs/components'
+import type { ReactNode } from 'react'
+import type { InputSlots, InputVariantProps } from './style'
 import { Button } from '@srcube-taro/button'
-import { type ReactRef } from '@srcube-taro/utils-react'
-import { type NativeProps } from '@srcube-taro/utils-taro'
-import { type SlotsToClasses } from '@srcube-taro/utils-tv'
-import {
-  Input as NativeInput,
-  type InputProps as NativeInputProps,
-} from '@tarojs/components'
+import { Input as NativeInput } from '@tarojs/components'
 import cn from 'classnames'
-import { ReactNode, useCallback, useMemo } from 'react'
-import { input, type InputSlots, type InputVariantProps } from './style'
+import { useCallback, useMemo } from 'react'
+import { input } from './style'
 
 interface Props {
   /**
@@ -63,7 +63,7 @@ export function useInput(props: UseInputProps) {
       startContent: cn(slots.startContent({ class: classNames?.startContent })),
       endContent: cn(slots.endContent({ class: classNames?.endContent })),
     }),
-    [variant, size, status, disabled, className, classNames],
+    [className, classNames, slots],
   )
 
   const getInputProps = useCallback(() => {
@@ -72,7 +72,7 @@ export function useInput(props: UseInputProps) {
       placeholder,
       ...rest,
     }
-  }, [disabled, rest])
+  }, [disabled, placeholder, rest])
 
   const getClearButtonProps = useCallback(() => {
     return {

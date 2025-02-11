@@ -2,24 +2,24 @@
   "name": "@srcube-taro/ui",
   "version": "0.0.1",
   "description": "UI components",
-  "files": [
-    "dist"
-  ],
-  "main": "src/index.ts",
-  "publishConfig": {
-    "access": "public"
-  },
   "exports": {
     ".": "./src/index.ts",
     "./plugins": "./src/plugins.ts"
   },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
-    "@srcube-taro/layouts": "workspace:*",
     "@srcube-taro/avatar": "workspace:*",
     "@srcube-taro/button": "workspace:*",
     "@srcube-taro/input": "workspace:*",
-    "@srcube-taro/spinner": "workspace:*",
-    "@srcube-taro/plugins": "workspace:*"
+    "@srcube-taro/layouts": "workspace:*",
+    "@srcube-taro/plugins": "workspace:*",
+    "@srcube-taro/spinner": "workspace:*"
   },
   "devDependencies": {
     "@srcube-taro/ts-config": "workspace:*"

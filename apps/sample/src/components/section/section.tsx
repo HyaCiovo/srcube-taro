@@ -1,6 +1,6 @@
+import type { FC, PropsWithChildren } from 'react'
 import { Box } from '@srcube-taro/ui'
 import cn from 'classnames'
-import { PropsWithChildren, type FC } from 'react'
 
 export interface SectionProps {
   title: string

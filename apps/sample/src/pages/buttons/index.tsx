@@ -29,8 +29,8 @@ export default function Buttons() {
         <Button variant="flat" color="primary">
           Flat
         </Button>
-        <Button variant="link" color="primary">
-          Link
+        <Button variant="text" color="primary">
+          Text
         </Button>
         <Button variant="shadow" color="primary">
           Shadow
@@ -47,14 +47,10 @@ export default function Buttons() {
       </Section>
       <Section title="Layouts" contentClass="flex flex-col gap-2">
         <Box className="grid grid-cols-2 gap-2">
-          <Button
-            startContent={<View className="i-[teenyicons--button-solid]" />}
-          >
+          <Button startContent={<View className="i-[teenyicons--button-solid]" />}>
             Start Content
           </Button>
-          <Button
-            endContent={<View className="i-[teenyicons--button-solid]" />}
-          >
+          <Button endContent={<View className="i-[teenyicons--button-solid]" />}>
             End Content
           </Button>
         </Box>

@@ -1,15 +1,17 @@
-type: 'application'
+type: application
+
+id: smaple
 
 tasks:
   dev-weapp:
-    command: 'npm run dev:weapp'
+    command: pnpm run dev:weapp
     options:
       runInCI: false
       persistent: true
     deps:
-      - 'ui:dev'
+      - ui:dev
 
   build-weapp:
-    command: 'npm run build:weapp'
+    command: pnpm run build:weapp
     deps:
-      - 'ui:build'
+      - ui:build

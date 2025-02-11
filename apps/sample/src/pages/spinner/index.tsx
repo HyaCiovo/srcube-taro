@@ -5,10 +5,7 @@ import { Spinner } from '@srcube-taro/ui'
 export default function SpinnerDemo() {
   return (
     <Page>
-      <Section
-        title="Colors"
-        contentClass="grid grid-cols-6 gap-4 justify-items-center"
-      >
+      <Section title="Colors" contentClass="grid grid-cols-6 gap-4 justify-items-center">
         <Spinner color="default" />
         <Spinner color="primary" />
         <Spinner color="danger" />

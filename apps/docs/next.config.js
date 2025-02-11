@@ -1,8 +1,8 @@
 /**
  * Velite build
  */
-const IS_DEV = process.argv.indexOf('dev') !== -1
-const IS_BUILD = process.argv.indexOf('build') !== -1
+const IS_DEV = process.argv.includes('dev')
+const IS_BUILD = process.argv.includes('build')
 
 if (!process.env.VELITE_STARTED && (IS_DEV || IS_BUILD)) {
   process.env.VELITE_STARTED = '1'

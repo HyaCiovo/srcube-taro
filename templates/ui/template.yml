@@ -1,20 +1,20 @@
 # https://moonrepo.dev/docs/config/template
 $schema: 'https://moonrepo.dev/schemas/template.json'
 
-id: 'ui'
-title: 'UI'
-description: '🚀 Create a UI component'
-destination: 'packages/ui'
+id: ui
+title: UI
+description: 🚀 Create a UI component
+destination: packages/ui
 
 variables:
   name:
-    type: 'string'
-    default: 'component'
+    type: string
+    default: component
     required: true
-    prompt: 'Component name?'
+    prompt: Component name?
 
   description:
-    type: 'string'
+    type: string
     default: ''
     required: false
-    prompt: 'Component description?'
+    prompt: Component description?

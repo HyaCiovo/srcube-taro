@@ -1,11 +1,17 @@
 {
   "name": "srcube-taro",
+  "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@9.15.1",
   "description": "",
-  "keywords": [],
   "author": "",
   "license": "MIT",
+  "keywords": [],
+  "engines": {
+    "node": "18.20.5"
+  },
   "scripts": {
+    "lint": "eslint . --fix",
     "clean": "moon clean"
   },
   "dependencies": {
@@ -13,12 +19,21 @@
     "weapp-tailwindcss": "catalog:"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "catalog:",
+    "@eslint-react/eslint-plugin": "catalog:",
+    "@eslint/js": "catalog:",
+    "@srcube-taro/eslint-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "tsup": "catalog:"
-  },
-  "packageManager": "pnpm@9.15.1",
-  "engines": {
-    "node": "18.20.5"
+    "eslint": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-mdx": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "globals": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   }
 }

@@ -2,13 +2,13 @@
   "name": "@srcube-taro/plugins",
   "version": "0.0.1",
   "description": "Plugins for srcube-taro",
+  "main": "./src/index.ts",
   "files": [
     "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "main": "./src/index.ts",
   "dependencies": {
     "@egoist/tailwindcss-icons": "catalog:",
     "@srcube-taro/utils-react": "workspace:*",

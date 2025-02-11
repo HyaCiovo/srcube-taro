@@ -1,8 +1,8 @@
 {
   "name": "@srcube-taro/docs",
+  "type": "module",
   "version": "0.0.1",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -11,9 +11,12 @@
     "content:build": "velite --clean"
   },
   "dependencies": {
+    "@egoist/tailwindcss-icons": "catalog:",
+    "@heroui/react": "catalog:",
     "@srcube-taro/ts-config": "workspace:*",
     "classnames": "catalog:",
     "dayjs": "catalog:",
+    "framer-motion": "catalog:",
     "nanoid": "catalog:",
     "next": "catalog:",
     "next-themes": "catalog:",

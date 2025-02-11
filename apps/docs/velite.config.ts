@@ -12,7 +12,8 @@ export default defineConfig({
           metadata: s.metadata(),
           meta: s.object({
             group: s.string(),
-            sort: s.number(),
+            sort: s.number().optional(),
+            status: s.enum(['waiting', 'done', 'updated', 'deprecated']).optional(),
           }),
           content: s.mdx(),
         })

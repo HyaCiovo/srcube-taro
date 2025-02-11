@@ -1,9 +1,9 @@
+import Logo from '@/assets/imgs/srcube.png'
 import { Page } from '@/components/page'
 import { Box, Stack } from '@srcube-taro/ui'
 import { Image } from '@tarojs/components'
 import { useLoad } from '@tarojs/taro'
 import { Router } from 'tarojs-router-next'
-import Logo from '@/assets/imgs/srcube.png'
 
 export default function Index() {
   useLoad(() => {
@@ -45,7 +45,7 @@ export default function Index() {
       <Box className="text-xl font-bold text-center">Srcube UI</Box>
       <Box className="text-xs font-bold uppercase">Layouts</Box>
       <Stack direction="vertical">
-        {layouts.map((link) => (
+        {layouts.map(link => (
           <Box
             className="flex justify-center py-2 rounded-lg bg-white font-medium"
             hoverClass="bg-gray-200"
@@ -58,7 +58,7 @@ export default function Index() {
       </Stack>
       <Box className="text-xs font-bold uppercase">Components</Box>
       <Stack direction="vertical">
-        {components.map((link) => (
+        {components.map(link => (
           <Box
             className="flex justify-center py-2 rounded-lg bg-white font-medium"
             hoverClass="bg-gray-200"

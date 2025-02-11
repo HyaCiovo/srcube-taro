@@ -1,12 +1,14 @@
-import { type NativeProps } from '@srcube-taro/utils-taro'
-import { type ReactRef } from '@srcube-taro/utils-react'
+import type { ReactRef } from '@srcube-taro/utils-react'
+import type { NativeProps } from '@srcube-taro/utils-taro'
+import type { ITouchEvent, ButtonProps as NativeButtonProps } from '@tarojs/components'
+import type { ReactNode } from 'react'
+import type { ButtonVariantProps } from './style'
 import {
   Button as NativeButton,
-  type ITouchEvent,
-  type ButtonProps as NativeButtonProps,
+
 } from '@tarojs/components'
-import { ReactNode, useCallback, useMemo } from 'react'
-import { button, buttonHover, type ButtonVariantProps } from './style'
+import { useCallback, useMemo } from 'react'
+import { button, buttonHover } from './style'
 
 interface Props {
   /**
@@ -74,7 +76,7 @@ export function useButton(props: UseButtonProps) {
         className: hoverClass,
       }),
     }),
-    [variant, color, size, disabled, loading, block, className],
+    [variant, color, size, disabled, loading, block, className, hoverClass],
   )
 
   const renderPlacedContent = useMemo(
@@ -90,7 +92,8 @@ export function useButton(props: UseButtonProps) {
 
   const handleTap = useCallback(
     (event: ITouchEvent) => {
-      if (disabled || loading) return
+      if (disabled || loading)
+        return
 
       if (onTap) {
         onTap(event)
@@ -105,7 +108,7 @@ export function useButton(props: UseButtonProps) {
       onClick: handleTap,
       ...rest,
     }
-  }, [styles, disabled, loading, handleTap])
+  }, [disabled, loading, rest, handleTap])
 
   return {
     Component,
