@@ -86,7 +86,10 @@ packages/ui/[component]/
 
 ## Docs
 
-Coming soon...
+Writing...
+
+<img src="./meta/docs-preview-home.jpg" alt="Srcube Taro UI" width="80%" />
+<img src="./meta/docs-preview-doc.jpg" alt="Srcube Taro UI" width="80%" />
 
 ## Preview
 
