@@ -1,6 +1,11 @@
+'use client'
+
 import { routes } from '@/config/sidebar'
 import { nanoid } from 'nanoid'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
+import cn from 'classnames'
 
 enum Status {
   waiting = 'Building',
@@ -23,6 +28,8 @@ function getSidebarData() {
 
 function Sidebar() {
   const sidebarData = getSidebarData()
+  
+  const pathname = usePathname()
 
   return (
     <nav className="fixed flex flex-col gap-4">
@@ -38,12 +45,21 @@ function Sidebar() {
                 className="flex items-center before:content-[''] before:size-1 before:rounded-full before:bg-gray-500/20 before:mr-2.5"
               >
                 <Link
-                  href={`/docs/${r.href}`}
-                  className="flex items-center gap-4 w-full font-light hover:text-gray-900 dark:hover:text-gray-100"
+                  href={`/docs${r.href}`}
+                  className={cn(
+                    'flex items-center gap-4 w-full font-light',
+                  )}
                 >
-                  <span className="opacity-60 text-sm">{r.title}</span>
+                  <span 
+                    className={cn(
+                      'text-sm',
+                      pathname === `/docs${r.href}` ? 'opacity-100' : 'opacity-50 hover:opacity-75',
+                    )}
+                  >
+                    {r.title}
+                  </span>
                   {r.status && (
-                    <span className="text-xs text-blue-500 rounded-full bg-blue-500/10 px-2 py-1">
+                    <span className="text-xs text-blue-500 rounded-full bg-blue-500/15 px-2 py-1">
                       {Status[r.status]}
                     </span>
                   )}

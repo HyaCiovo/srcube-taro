@@ -20,12 +20,12 @@ export const routes: Routes = [
     routes: [
       {
         title: 'Introduction',
-        href: 'guides/introduction',
+        href: '/guides/introduction',
         status: 'waiting',
       },
       {
         title: 'Installation',
-        href: 'guides/installation',
+        href: '/guides/installation',
         status: 'waiting',
       },
     ],
@@ -35,12 +35,12 @@ export const routes: Routes = [
     routes: [
       {
         title: 'Box',
-        href: 'layouts/box',
+        href: '/layouts/box',
         status: 'waiting',
       },
       {
         title: 'Stack',
-        href: 'layouts/stack',
+        href: '/layouts/stack',
         status: 'waiting',
       },
     ],
@@ -50,20 +50,20 @@ export const routes: Routes = [
     routes: [
       {
         title: 'Avatar',
-        href: 'components/avatar',
+        href: '/components/avatar',
         status: 'waiting',
       },
       {
         title: 'Button',
-        href: 'components/button',
+        href: '/components/button',
       },
       {
         title: 'Input',
-        href: 'components/input',
+        href: '/components/input',
       },
       {
         title: 'Spinner',
-        href: 'components/spinner',
+        href: '/components/spinner',
       },
     ],
   },
