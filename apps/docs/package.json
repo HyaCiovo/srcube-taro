@@ -6,17 +6,28 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
-    "content:dev": "velite --watch",
-    "content:build": "velite --clean"
+    "start": "next start"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.20.0",
     "@egoist/tailwindcss-icons": "catalog:",
     "@heroui/react": "catalog:",
+    "@markdoc/markdoc": "^0.5.1",
+    "@markdoc/next.js": "^0.4.0",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/mdx": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.1.7",
     "@srcube-taro/ts-config": "workspace:*",
+    "@stefanprobst/rehype-extract-toc": "^2.2.1",
+    "@tarojs/components-react": "catalog:",
+    "@types/mdx": "^2.0.13",
     "classnames": "catalog:",
     "dayjs": "catalog:",
     "framer-motion": "catalog:",
+    "globby": "^14.1.0",
+    "hast-util-to-jsx-runtime": "^2.3.5",
+    "mutative": "^1.1.0",
     "nanoid": "catalog:",
     "next": "catalog:",
     "next-themes": "catalog:",
@@ -24,13 +35,28 @@
     "prism-react-renderer": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "tailwindcss": "catalog:"
+    "react-live": "^4.1.8",
+    "react-use": "^17.6.0",
+    "rehype-pretty-code": "catalog:",
+    "rehype-slug": "^6.0.0",
+    "remark": "^15.0.1",
+    "remark-extract-frontmatter": "^3.2.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-mdx-frontmatter": "^5.0.0",
+    "remark-toc": "^9.0.0",
+    "shiki": "catalog:",
+    "tailwindcss": "catalog:",
+    "to-vfile": "^8.0.0",
+    "use-mutative": "^1.2.1",
+    "vfile-matter": "^5.0.0",
+    "yaml": "^2.7.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "catalog:",
     "@tailwindcss/typography": "catalog:",
     "autoprefixer": "catalog:",
-    "typescript": "catalog:",
-    "velite": "catalog:"
+    "raw-loader": "^4.0.2",
+    "typescript": "catalog:"
   }
 }

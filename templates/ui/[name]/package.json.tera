@@ -17,7 +17,7 @@ to: '{{ name }}/package.json'
     "@srcube-taro/utils-taro": "workspace:*",
     "@srcube-taro/utils-react": "workspace:*",
     "@srcube-taro/utils-tv": "workspace:*",
-    "@tarojs/components": "catalog:",
+    "@tarojs/components-react": "catalog:",
     "react": "catalog:",
     "tailwind-variants": "catalog:"
   },

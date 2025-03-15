@@ -5,6 +5,7 @@ export default antfu(
   {
     react: true,
     rules: {
+      'ts/ban-ts-comment': 'off',
       '@typescript-eslint/no-unused-vars': ['error', {
         ignoreRestSiblings: true,
         varsIgnorePattern: '^_',

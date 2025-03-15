@@ -13,11 +13,11 @@ export const button = tv({
   variants: {
     color: {
       // !Runtime Bug: Default button text color need to be important
-      default: 'bg-gray-100 border-gray-200 !text-black',
-      primary: 'bg-primary-500 border-primary-500 text-white',
-      success: 'bg-success-500 border-success-500 text-white',
-      warning: 'bg-warning-500 border-warning-500 text-white',
-      danger: 'bg-danger-500 border-danger-500 text-white',
+      default: 'bg-gray-100 border-gray-200 !text-black !dark:text-white',
+      primary: 'bg-primary border-primary text-white',
+      success: 'bg-success border-success text-white',
+      warning: 'bg-warning border-warning text-white',
+      danger: 'bg-danger border-danger text-white',
     },
     size: {
       xs: 'h-6 px-2 text-xs rounded-md',

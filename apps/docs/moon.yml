@@ -5,7 +5,13 @@ id: docs
 tasks:
   dev:
     command: pnpm dev
+    deps:
+      - ui:dev
   build:
     command: pnpm build
+    deps:
+      - ui:build
   start:
     command: pnpm start
+    deps:
+      - ui:build

@@ -1,6 +1,6 @@
 import type { UserConfigExport } from '@tarojs/cli'
 import { defineConfig } from '@tarojs/cli'
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
+import tsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack'
 
 import devConfig from './dev'
@@ -55,7 +55,7 @@ export default defineConfig<'webpack5'>(
           },
         },
         webpackChain(chain) {
-          chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+          chain.resolve.plugin('tsconfig-paths').use(tsconfigPathsPlugin)
           chain.merge({
             plugin: {
               install: {
@@ -92,7 +92,7 @@ export default defineConfig<'webpack5'>(
           },
         },
         webpackChain(chain) {
-          chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+          chain.resolve.plugin('tsconfig-paths').use(tsconfigPathsPlugin)
           chain.merge({
             plugin: {
               install: {

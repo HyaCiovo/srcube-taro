@@ -1,8 +1,11 @@
 import type { PropsWithChildren } from 'react'
 import { ModeSwitcher } from '@/components/mode-switcher'
+import { ScrollReset } from '@/components/scroll-reset'
 import Link from 'next/link'
 import { Providers } from './providers'
-import './globals.css'
+
+import '@/styles/globals.css'
+import '@/styles/sandpack.css'
 
 export default function RootLayout({ children }: PropsWithChildren) {
   const navItems = [
@@ -13,6 +16,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="relative mx-auto flex flex-col min-h-screen">
+        <ScrollReset />
         <Providers>
           <header className="fixed z-40 w-full bg-white/20 dark:bg-black/20 backdrop-blur-lg border-b border-gray-500/20">
             <div className="container flex gap-4 mx-auto max-w-screen-2xl h-16 items-center">

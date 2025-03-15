@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { dynamicIconsPlugin } from '@egoist/tailwindcss-icons'
-import { SrcubeUI } from '@srcube-taro/ui/plugins'
+import { srcubeUI } from '@srcube-taro/ui/plugins'
 import colors from 'tailwindcss/colors'
 
 export default {
@@ -19,7 +19,7 @@ export default {
     },
   },
   plugins: [
-    SrcubeUI({
+    srcubeUI({
       prefix: 'srcube',
     }),
     dynamicIconsPlugin(),

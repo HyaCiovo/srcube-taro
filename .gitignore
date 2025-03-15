@@ -10,9 +10,6 @@ node_modules
 dist
 .next
 
-# velite
-.velite
-
 # Taro
 deploy_versions
 .temp

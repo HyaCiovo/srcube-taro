@@ -1,39 +1,13 @@
 {
-  // Disable format
-  "editor.formatOnSave": false,
-  "editor.formatOnPaste": false,
-
-  // Disable formaters
+  // Disable the default formatter, use eslint instead
   "prettier.enable": false,
-  "biome.enabled": false,
+  "biome.enable": false,
+  "editor.formatOnSave": false,
 
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
-  },
-
-  // Disable default formatter
-  "[typescript]": {
-    "editor.defaultFormatter": null
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": null
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": null
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": null
-  },
-  "[json]": {
-    "editor.defaultFormatter": null
-  },
-  "[mdx]": {
-    "editor.defaultFormatter": null
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": null
   },
 
   "eslint.runtime": "node",

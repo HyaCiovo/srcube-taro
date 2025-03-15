@@ -1,1 +1,1 @@
-export { default as SrcubeUI } from './tailwind'
+export { default as srcubeUI } from './tailwind'

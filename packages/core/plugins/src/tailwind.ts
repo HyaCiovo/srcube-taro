@@ -9,19 +9,34 @@ export interface ThemeColors {
   error: Record<string, string>
 }
 
-interface Themes { colors?: Partial<ThemeColors> }
+interface Theme { colors?: Partial<ThemeColors> }
 
 interface SrcubeUIPluginConfig {
   prefix?: string
-  themes?: Themes
+  theme?: Theme
 }
 
 const defaultColors = {
-  primary: colors.blue,
-  info: colors.sky,
-  success: colors.green,
-  warning: colors.yellow,
-  danger: colors.red,
+  primary: {
+    DEFAULT: colors.blue[500],
+    ...colors.blue,
+  },
+  info: {
+    DEFAULT: colors.sky[500],
+    ...colors.sky,
+  },
+  success: {
+    DEFAULT: colors.green[500],
+    ...colors.green,
+  },
+  warning: {
+    DEFAULT: colors.yellow[500],
+    ...colors.yellow,
+  },
+  danger: {
+    DEFAULT: colors.red[500],
+    ...colors.red,
+  },
 }
 
 function convertColors(prefix: string, colors: Record<string, unknown>) {
@@ -40,14 +55,14 @@ function convertColors(prefix: string, colors: Record<string, unknown>) {
   }, {})
 }
 
-function SrcubeUI(config: SrcubeUIPluginConfig = {}) {
-  const { prefix = 'srcube', themes = {} } = config
+function srcubeUI(config: SrcubeUIPluginConfig = {}) {
+  const { prefix = 'srcube', theme = {} } = config
 
   return plugin(
     ({ addBase }) => {
       const themeColors = {
         ...defaultColors,
-        ...themes.colors,
+        ...theme.colors,
       }
 
       addBase({
@@ -59,7 +74,7 @@ function SrcubeUI(config: SrcubeUIPluginConfig = {}) {
         extend: {
           colors: {
             ...defaultColors,
-            ...themes.colors,
+            ...theme.colors,
           },
         },
       },
@@ -67,4 +82,4 @@ function SrcubeUI(config: SrcubeUIPluginConfig = {}) {
   )
 }
 
-export default SrcubeUI
+export default srcubeUI
