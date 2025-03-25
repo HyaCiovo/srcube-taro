@@ -9,7 +9,7 @@ export default function Home() {
             <h1 className="mt-12 text-5xl font-medium leading-[1.2]">
               <p>
                 Modular and extensible&nbsp;
-                <span className="text-transparent bg-clip-text bg-gradient-to-t from-green-500 via-primary to-primary">
+                <span className="text-transparent bg-clip-text bg-gradient-to-t from-green-500 via-primary-500 to-primary-500">
                   UI library
                 </span>
                 &nbsp;for Taro.js

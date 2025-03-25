@@ -1,5 +1,6 @@
 {
   "name": "@srcube-taro/spinner",
+  "type": "module",
   "version": "0.0.1",
   "description": "Spinner component",
   "main": "src/index.ts",

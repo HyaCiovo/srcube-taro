@@ -19,3 +19,5 @@ deploy_versions
 
 # OSX
 .DS_Store
+
+.vercel

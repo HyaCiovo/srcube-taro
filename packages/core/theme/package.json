@@ -1,9 +1,8 @@
 {
-  "name": "@srcube-taro/button",
-  "type": "module",
+  "name": "@srcube-taro/theme",
   "version": "0.0.1",
-  "description": "Button component",
-  "main": "src/index.ts",
+  "description": "Plugins for srcube-taro",
+  "main": "./src/index.ts",
   "files": [
     "dist"
   ],
@@ -11,14 +10,14 @@
     "access": "public"
   },
   "dependencies": {
-    "@srcube-taro/spinner": "workspace:*",
-    "@srcube-taro/theme": "workspace:*",
+    "@egoist/tailwindcss-icons": "catalog:",
     "@srcube-taro/utils-react": "workspace:*",
     "@srcube-taro/utils-taro": "workspace:*",
     "@srcube-taro/utils-tv": "workspace:*",
     "@tarojs/components": "catalog:",
     "react": "catalog:",
-    "tailwind-variants": "catalog:"
+    "tailwind-variants": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@srcube-taro/ts-config": "workspace:*"

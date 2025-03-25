@@ -10,8 +10,8 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [
       ['remark-frontmatter'],
-      ['remark-mdx-frontmatter'],
-      ['remark-gfm', { singleTilde: false, throwOnError: true }],
+    //   ['remark-mdx-frontmatter'],
+    //   ['remark-gfm', { singleTilde: false, throwOnError: true }],
     ],
     rehypePlugins: [
       ['@stefanprobst/rehype-extract-toc'],
@@ -59,24 +59,12 @@ const config = {
     config.module.rules = [
       ...config.module.rules,
       {
-        test: /\.raw.js$/i,
+        test: /\.raw\.(js|jsx|ts|tsx)$/i,
         use: 'raw-loader',
       },
       {
-        test: /\.raw.jsx$/i,
-        use: 'raw-loader',
-      },
-      {
-        test: /\.raw.ts$/i,
-        use: 'raw-loader',
-      },
-      {
-        test: /\.raw.tsx$/i,
-        use: 'raw-loader',
-      },
-      {
-        test: /\.raw.css$/i,
-        use: 'raw-loader',
+        test: /\.raw\.css$/i,
+        type: 'asset/source',
       },
     ]
 

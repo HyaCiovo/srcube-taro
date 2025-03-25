@@ -1,5 +1,6 @@
 {
   "name": "@srcube-taro/plugins",
+  "type": "module",
   "version": "0.0.1",
   "description": "Plugins for srcube-taro",
   "main": "./src/index.ts",

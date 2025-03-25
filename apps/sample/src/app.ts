@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react'
 import { useLaunch } from '@tarojs/taro'
 
-import './app.less'
+import './app.css'
 
 function App({ children }: PropsWithChildren) {
   useLaunch(() => {

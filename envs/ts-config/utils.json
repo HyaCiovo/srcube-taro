@@ -1,7 +1,6 @@
 {
   "extends": "./react",
   "compilerOptions": {
-    "moduleResolution": "node",
     "baseUrl": ".",
     "outDir": "./dist",
     "paths": {

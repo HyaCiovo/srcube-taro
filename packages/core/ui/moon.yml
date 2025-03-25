@@ -11,6 +11,7 @@ tasks:
     deps:
       # Core
       - 'core-plugins:dev'
+      - 'core-theme:dev'
       # UI
       - 'ui-avatar:dev'
       - 'ui-layouts:dev'
@@ -26,6 +27,7 @@ tasks:
     deps:
       # Core
       - 'core-plugins:build'
+      - 'core-theme:build'
       # UI
       - 'ui-avatar:build'
       - 'ui-layouts:build'

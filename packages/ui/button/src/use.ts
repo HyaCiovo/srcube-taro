@@ -1,14 +1,11 @@
+import type { ButtonVariantProps } from '@srcube-taro/theme'
 import type { ReactRef } from '@srcube-taro/utils-react'
 import type { NativeProps } from '@srcube-taro/utils-taro'
 import type { ITouchEvent, ButtonProps as NativeButtonProps } from '@tarojs/components'
 import type { ReactNode } from 'react'
-import type { ButtonVariantProps } from './style'
-import {
-  Button as NativeButton,
-
-} from '@tarojs/components'
+import { button, buttonHover } from '@srcube-taro/theme'
+import { Button as NativeButton } from '@tarojs/components'
 import { useCallback, useMemo } from 'react'
-import { button, buttonHover } from './style'
 
 interface Props {
   /**

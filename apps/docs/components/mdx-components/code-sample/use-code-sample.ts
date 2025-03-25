@@ -25,7 +25,7 @@ export function useCodeSample(props: UseCodeSampleProps) {
   const imports = Object.assign({}, ...scopeValues)
 
   // If single file
-  if (Object.keys(files).length === 1) {
+  if (Object.keys(files)?.length === 1) {
     // get first item from files
     const file = Object.values(files)[0] as string
 

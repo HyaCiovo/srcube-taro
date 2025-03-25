@@ -9,7 +9,7 @@ const Box = forwardRef<ViewProps, BoxProps>((props: UseBoxProps, ref) => {
   const { Component, domRef, children, getBoxProps } = useBox({ ...props, ref })
 
   return (
-    <Component ref={domRef} {...getBoxProps()}>
+    <Component {...getBoxProps()} ref={domRef}>
       {children}
     </Component>
   )

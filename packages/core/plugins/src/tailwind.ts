@@ -49,10 +49,10 @@ function convertColors(prefix: string, colors: Record<string, unknown>) {
     }
     else {
       // Normal color value
-      acc[`--${prefix}-${key}`] = value
+      acc[`--${prefix}-${key}`] = value as string
     }
     return acc
-  }, {})
+  }, {} as Record<string, string>)
 }
 
 function srcubeUI(config: SrcubeUIPluginConfig = {}) {

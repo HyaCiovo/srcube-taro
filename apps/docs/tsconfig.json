@@ -8,8 +8,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["*"],
-      "#velite": ["./.velite"]
+      "@/*": ["*"]
     },
     "resolveJsonModule": true,
     "allowJs": true,

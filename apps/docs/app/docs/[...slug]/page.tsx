@@ -1,4 +1,3 @@
-import type { PropsWithChildren } from 'react'
 import path from 'node:path'
 import QRCode from '@/assets/imgs/srcube-ui.png'
 import { TableOfContents } from '@/components/table-of-contents'
@@ -7,12 +6,12 @@ import { compileMdx } from '@/lib/mdx'
 import { flattenToc } from '@/utils/toc'
 import Image from 'next/image'
 
-interface DocsPageProps extends PropsWithChildren {
+interface DocsPageProps {
   params: Promise<{ slug: string[] }>
 }
 
-export default async function DocsPage({ children, ...props }: DocsPageProps) {
-  const { slug } = await props.params
+export default async function DocsPage({ params }: DocsPageProps) {
+  const { slug } = await params
 
   const { default: Doc } = await import(`@/content/${slug.join('/')}.mdx`)
 

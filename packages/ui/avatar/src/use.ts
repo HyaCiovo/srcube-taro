@@ -1,12 +1,12 @@
+import type { AvatarSlots, AvatarVariantProps } from '@srcube-taro/theme'
 import type { ReactRef } from '@srcube-taro/utils-react'
 import type { NativeProps } from '@srcube-taro/utils-taro'
 import type { SlotsToClasses } from '@srcube-taro/utils-tv'
 import type { BaseEventOrig, ImageProps, ViewProps } from '@tarojs/components'
-import type { AvatarSlots, AvatarVariantProps } from './style'
+import { avatar } from '@srcube-taro/theme'
 import { View } from '@tarojs/components'
 import cn from 'classnames'
 import { useCallback, useMemo } from 'react'
-import { avatar } from './style'
 
 interface Props {
   /**

@@ -14,7 +14,7 @@ function CodeBlock(props: CodeBlockProps) {
 
   useLayoutEffect(() => {
     void highlights.codeblock(code, 'tsx').then(setNodes)
-  }, [])
+  }, [code])
 
   if (!nodes) {
     return (

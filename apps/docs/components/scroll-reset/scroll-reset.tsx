@@ -8,11 +8,16 @@ function ScrollReset() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.addEventListener('load', () => {
+      const scrollToTop = () => {
         window.scrollTo(0, 0)
-      })
+      }
 
+      window.addEventListener('load', scrollToTop)
       window.scrollTo(0, 0)
+
+      return () => {
+        window.removeEventListener('load', scrollToTop)
+      }
     }
   }, [pathname])
 

@@ -5,7 +5,7 @@ import colors from 'tailwindcss/colors'
 
 export default {
   content: [
-    '../../node_modules/@srcube-taro/**/*.{html,cjs,mjs,jsx}',
+    '../../node_modules/@srcube-taro/theme/dist/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{html,js,jsx,ts,tsx}',
   ],
   theme: {

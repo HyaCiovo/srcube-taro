@@ -76,7 +76,7 @@ export function Codeblock(props: CodeBlockProps) {
   if (!nodes) {
     return (
       <Skeleton className="inline-flex rounded">
-        <div className="w-64 rounded-lg bg-secondary">Loading...</div>
+        <div className="w-64 rounded-lg">...</div>
       </Skeleton>
     )
   }

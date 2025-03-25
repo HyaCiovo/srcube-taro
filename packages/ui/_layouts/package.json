@@ -1,5 +1,6 @@
 {
   "name": "@srcube-taro/layouts",
+  "type": "module",
   "version": "0.0.1",
   "description": "Layout components",
   "main": "src/index.ts",

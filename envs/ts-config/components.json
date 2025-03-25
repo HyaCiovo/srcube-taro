@@ -2,7 +2,7 @@
   "extends": "./react",
   "name": "Components",
   "compilerOptions": {
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "outDir": "dist"
   }

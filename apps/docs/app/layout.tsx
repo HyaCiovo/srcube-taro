@@ -1,11 +1,19 @@
+import type { Metadata } from 'next'
 import type { PropsWithChildren } from 'react'
 import { ModeSwitcher } from '@/components/mode-switcher'
 import { ScrollReset } from '@/components/scroll-reset'
+
 import Link from 'next/link'
+
 import { Providers } from './providers'
 
 import '@/styles/globals.css'
 import '@/styles/sandpack.css'
+
+export const metadata: Metadata = {
+  title: 'SrcubeUI Taro',
+  description: 'SrcubeUI Taro is a UI library for Taro.js that helps you build beautiful and modular cross-platform mini app user interfaces.',
+}
 
 export default function RootLayout({ children }: PropsWithChildren) {
   const navItems = [

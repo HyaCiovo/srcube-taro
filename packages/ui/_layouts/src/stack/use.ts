@@ -1,10 +1,10 @@
+import type { StackVariantsProps } from '@srcube-taro/theme'
 import type { ReactRef } from '@srcube-taro/utils-react'
 import type { NativeProps } from '@srcube-taro/utils-taro'
 import type { ViewProps } from '@tarojs/components'
-import type { StackVariantsProps } from './style'
+import { stack } from '@srcube-taro/theme'
 import { View } from '@tarojs/components'
 import { useCallback, useMemo } from 'react'
-import { stack } from './style'
 
 interface Props {
   ref?: ReactRef<ViewProps>

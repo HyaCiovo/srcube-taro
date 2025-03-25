@@ -1,0 +1,8 @@
+@import 'weapp-tailwindcss';
+
+@config '../tailwind.config.ts';
+
+view,
+text {
+  font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+}

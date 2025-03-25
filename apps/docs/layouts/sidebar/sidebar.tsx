@@ -1,11 +1,10 @@
 'use client'
 
 import { routes } from '@/config/sidebar'
+import cn from 'classnames'
 import { nanoid } from 'nanoid'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
-import cn from 'classnames'
 
 enum Status {
   waiting = 'Building',
@@ -28,7 +27,7 @@ function getSidebarData() {
 
 function Sidebar() {
   const sidebarData = getSidebarData()
-  
+
   const pathname = usePathname()
 
   return (
@@ -50,7 +49,7 @@ function Sidebar() {
                     'flex items-center gap-4 w-full font-light',
                   )}
                 >
-                  <span 
+                  <span
                     className={cn(
                       'text-sm',
                       pathname === `/docs${r.href}` ? 'opacity-100' : 'opacity-50 hover:opacity-75',

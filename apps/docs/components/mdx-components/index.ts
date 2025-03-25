@@ -1,6 +1,7 @@
 import type { MDXComponents as MDXComponentsType } from 'mdx/types'
 import NextImage from 'next/image'
 
+import { Anchor } from './anchor'
 import { CodeSample } from './code-sample'
 import { ComponentLinks } from './component-links'
 import { H1, H2, H3, H4 } from './headings'
@@ -25,6 +26,7 @@ const MDXComponents: MDXComponentsType = {
    * Markdown components
    */
   // ...Icons,
+  a: Anchor,
   h1: H1,
   h2: H2,
   h3: H3,
