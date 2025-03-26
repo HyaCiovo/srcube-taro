@@ -43,26 +43,24 @@ srcube-taro/
 ### Prerequisites
 
 - Moon >= 1.0.0
-- Node.js >= 18.20.5
-- pnpm >= 9.15.1
 
-### Installation
-
-Install dependencies
-
-```bash
-pnpm install
-```
+> We only need `moon` for the workspace. It means we don't need `pnpm` or `Node.js` environment locally.
 
 ### Development
 
+Because the moon toolchain, just start the development!
+
 ```bash
+# Sample weapp
 moon sample:dev-weapp
+# Docs
+moon docs:dev
 ```
 
 ### Build
 
 ```bash
+# Build all `build` commands in the workspace
 moon :build
 ```
 
@@ -75,7 +73,6 @@ packages/ui/[component]/
 ├── src/
 |   ├── [component].tsx
 |   ├── index.ts
-|   ├── style.ts
 |   └── use.ts
 ├── moon.yml
 ├── package.json
@@ -84,17 +81,16 @@ packages/ui/[component]/
 └── README.md
 ```
 
-## Docs
-
-Writing...
-
-<img src="./meta/docs-preview-home.jpg" alt="Srcube Taro UI" width="80%" />
-<img src="./meta/docs-preview-doc.jpg" alt="Srcube Taro UI" width="80%" />
+> The component style in the `packages/core/theme/components/[component].ts`.
 
 ## Preview
 
 <img src="./meta/weapp-qr-code.jpg" alt="Srcube Taro UI" width="150" />
 
+## Contribution
+
+We welcome contributions from the community! Please refer to the [CONTRIBUTING.md](./CONTRIBUTING.md) file for more information.
+
 ## License
 
-MIT
+[MIT](./LICENSE.md)
