@@ -1,10 +1,5 @@
 import createMDX from '@next/mdx'
 
-// /** @type {import('rehype-pretty-code').Options} */
-// const options = {
-//   // See Options section below.
-// }
-
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
@@ -15,6 +10,7 @@ const withMDX = createMDX({
     ],
     rehypePlugins: [
       ['@stefanprobst/rehype-extract-toc'],
+      ['rehype-slug'],
     ],
   },
 })

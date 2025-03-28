@@ -2,11 +2,14 @@ import type { MDXComponents as MDXComponentsType } from 'mdx/types'
 import NextImage from 'next/image'
 
 import { Anchor } from './anchor'
+import { Blockquote } from './blockquote'
+import { Code } from './code'
 import { CodeSample } from './code-sample'
 import { ComponentLinks } from './component-links'
 import { H1, H2, H3, H4 } from './headings'
 import { ImportComponent } from './import-component'
 import { PackageInstall } from './package-install'
+import { Steps } from './steps'
 import { APITable } from './table'
 import { Strong } from './text'
 
@@ -22,6 +25,8 @@ const MDXComponents: MDXComponentsType = {
   PackageInstall,
   ImportComponent,
   CodeSample,
+  Steps,
+  Blockquote,
   /**
    * Markdown components
    */
@@ -31,7 +36,7 @@ const MDXComponents: MDXComponentsType = {
   h2: H2,
   h3: H3,
   h4: H4,
-  // code: Code,
+  code: Code,
   strong: Strong,
   // table: Table,
   // thead: THead,

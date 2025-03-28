@@ -1,4 +1,4 @@
-import { CodeBlock } from '@/components/mdx-components/code-block'
+import { CodeBlock } from '@/components/mdx-components/code'
 import { SandpackStack, useActiveCode } from '@codesandbox/sandpack-react'
 
 // interface CodeViewerProps {
@@ -12,7 +12,7 @@ function CodeViewer() {
   return (
     <SandpackStack className="!h-full !bg-codeblock">
       <div className="sp-code-viewer max-h-[600px] h-full overflow-y-scroll">
-        <CodeBlock code={code} />
+        <CodeBlock lang="tsx">{code}</CodeBlock>
       </div>
     </SandpackStack>
   )

@@ -21,12 +21,10 @@ export const routes: Routes = [
       {
         title: 'Introduction',
         href: '/guides/introduction',
-        status: 'waiting',
       },
       {
         title: 'Installation',
         href: '/guides/installation',
-        status: 'waiting',
       },
     ],
   },
@@ -56,15 +54,22 @@ export const routes: Routes = [
       {
         title: 'Button',
         href: '/components/button',
+        status: 'waiting',
       },
       {
         title: 'Input',
         href: '/components/input',
+        status: 'waiting',
       },
       {
         title: 'Spinner',
         href: '/components/spinner',
+        status: 'waiting',
       },
     ],
+  },
+  {
+    title: 'AI',
+    routes: [],
   },
 ]

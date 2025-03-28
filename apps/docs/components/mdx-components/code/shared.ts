@@ -8,11 +8,9 @@ import { codeToHast } from 'shiki/bundle/web'
 async function codeblock(code: string, lang: BundledLanguage = 'bash') {
   const out = await codeToHast(code, {
     lang,
-    theme: 'catppuccin-mocha',
-    colorReplacements: {
-      // background to transparent
-      '#1e1e2e': 'transparent',
-    },
+    // theme: 'catppuccin-mocha',
+    theme: 'github-dark-high-contrast',
+    colorReplacements: {},
   })
 
   return toJsxRuntime(out, {

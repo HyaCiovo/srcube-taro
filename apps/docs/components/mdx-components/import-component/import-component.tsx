@@ -4,7 +4,7 @@ import type { Key } from 'react'
 
 import { Snippet, Tab, Tabs } from '@heroui/react'
 import { useState } from 'react'
-import { Codeblock } from '../code'
+import { CodeBlock } from '../code'
 
 type TabKey = 'subpackage' | 'ui'
 type TabName = 'Subpackage' | 'UI'
@@ -53,7 +53,7 @@ export function ImportComponent(props: ImportComponentProps) {
                 copyButton: 'text-lg text-default-400',
               }}
             >
-              <Codeblock lang="jsx">{commands[key as TabKey]}</Codeblock>
+              <CodeBlock lang="jsx">{commands[key as TabKey]}</CodeBlock>
             </Snippet>
           </Tab>
         )

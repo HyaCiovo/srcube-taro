@@ -2,8 +2,7 @@ import path from 'node:path'
 import QRCode from '@/assets/imgs/srcube-ui.png'
 import { TableOfContents } from '@/components/table-of-contents'
 import { Sidebar } from '@/layouts/sidebar'
-import { compileMdx } from '@/lib/mdx'
-import { flattenToc } from '@/utils/toc'
+import { compileMdx, flattenToc } from '@/utils/mdx'
 import Image from 'next/image'
 
 interface DocsPageProps {

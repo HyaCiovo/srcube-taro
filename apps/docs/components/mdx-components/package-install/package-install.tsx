@@ -3,7 +3,7 @@
 import type { Key } from 'react'
 import { Snippet, Tab, Tabs } from '@heroui/react'
 import { useState } from 'react'
-import { Codeblock } from '../code'
+import { CodeBlock } from '../code'
 
 type PackageManagerName = 'npm' | 'yarn' | 'pnpm'
 
@@ -57,7 +57,7 @@ export function PackageInstall(props: PackageInstallProps) {
                 copyButton: 'text-lg text-default-400',
               }}
             >
-              <Codeblock lang="bash">{commands[name]}</Codeblock>
+              <CodeBlock lang="bash">{commands[name]}</CodeBlock>
             </Snippet>
           </Tab>
         ))}

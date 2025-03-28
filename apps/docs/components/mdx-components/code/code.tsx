@@ -2,7 +2,7 @@
 
 import type { PropsWithChildren } from 'react'
 import type { BundledLanguage } from 'shiki/bundle/web'
-import { Skeleton } from '@heroui/react'
+import * as HeroUI from '@heroui/react'
 import cn from 'classnames'
 import { useLayoutEffect, useState } from 'react'
 import { highlights } from './shared'
@@ -11,19 +11,23 @@ export type InlineCodeProps = PropsWithChildren<{
   className?: string
 }>
 
-export function InlineCode({ children, className }: InlineCodeProps) {
+function InlineCode({ children, className }: InlineCodeProps) {
   return (
-    <code className={cn('bg-default-200 dark:bg-default-800 px-1 rounded-md text-sm', className)}>
+    <HeroUI.Code
+      className={cn('p-0 relative before:content-["`"] after:content-["`"] font-semibold font-mono text-small rounded-md text-default-900 dark:text-default-500 bg-transparent', className)}
+    >
       {children}
-    </code>
+    </HeroUI.Code>
   )
 }
+
+InlineCode.displayName = 'InlineCode'
 
 export type InlineCodeChipProps = PropsWithChildren<{
   className?: string
 }>
 
-export function InlineCodeChip({ children, className }: InlineCodeChipProps) {
+function InlineCodeChip({ children, className }: InlineCodeChipProps) {
   return (
     <InlineCode
       className={cn(
@@ -36,26 +40,7 @@ export function InlineCodeChip({ children, className }: InlineCodeChipProps) {
   )
 }
 
-export interface CodeProps {
-  lang: string
-  children: string
-  className?: string
-}
-
-export function Code(props: CodeProps) {
-  const { children, className } = props
-
-  return (
-    <code
-      className={cn(
-        'inline-block px-1 py-0.5 bg-black/10 dark:bg-white/10 rounded-md text-xs text-gray-500 dark:text-gray-400 font-thin before:hidden after:hidden',
-        className,
-      )}
-    >
-      {children}
-    </code>
-  )
-}
+InlineCodeChip.displayName = 'InlineCodeChip'
 
 export type CodeBlockProps = PropsWithChildren<{
   lang: BundledLanguage
@@ -64,7 +49,7 @@ export type CodeBlockProps = PropsWithChildren<{
   className?: string
 }>
 
-export function Codeblock(props: CodeBlockProps) {
+function CodeBlock(props: CodeBlockProps) {
   const { initial, children, lang, className = 'inline-block' } = props
 
   const [nodes, setNodes] = useState(initial)
@@ -75,11 +60,48 @@ export function Codeblock(props: CodeBlockProps) {
 
   if (!nodes) {
     return (
-      <Skeleton className="inline-flex rounded">
+      <HeroUI.Skeleton className="inline-flex rounded">
         <div className="w-64 rounded-lg">...</div>
-      </Skeleton>
+      </HeroUI.Skeleton>
     )
   }
 
   return <div className={className}>{nodes}</div>
 }
+
+CodeBlock.displayName = 'CodeBlock'
+
+function Code(props: React.HTMLAttributes<HTMLElement>) {
+  const { children, className } = props
+
+  if (!className) {
+    return (
+      <InlineCode>
+        {children}
+      </InlineCode>
+    )
+  }
+
+  const lang = (className?.replace('language-', '') ?? 'bash') as BundledLanguage
+  const isMultiLine = (children as string)?.split?.('\n')?.length > 2
+
+  return (
+    <HeroUI.Snippet
+      fullWidth
+      hideSymbol
+      disableTooltip
+      className={cn('not-prose', className)}
+      classNames={{
+        base: cn('dark not-prose bg-codeblock', isMultiLine && 'items-start'),
+        pre: 'px-2 font-light',
+        copyButton: 'text-lg text-default-400',
+      }}
+    >
+      <CodeBlock lang={lang}>
+        {children as string}
+      </CodeBlock>
+    </HeroUI.Snippet>
+  )
+}
+
+export { Code, CodeBlock, InlineCode, InlineCodeChip }

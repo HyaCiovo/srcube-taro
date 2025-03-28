@@ -1,8 +1,8 @@
 import { dynamicIconsPlugin } from '@egoist/tailwindcss-icons'
 import { heroui } from '@heroui/react'
-import { srcubeUI } from '@srcube-taro/ui/plugins'
+// import { srcubeUI } from '@srcube-taro/ui/plugins'
 import typography from '@tailwindcss/typography'
-import colors from 'tailwindcss/colors'
+// import colors from 'tailwindcss/colors'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -19,10 +19,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: colors.blue[500],
-          ...colors.blue,
-        },
         codeblock: {
           DEFAULT: '#151515',
           100: '#2d2d2d',
@@ -32,7 +28,7 @@ export default {
   },
   plugins: [
     heroui(),
-    srcubeUI(),
+    // srcubeUI(),
     dynamicIconsPlugin(),
     typography(),
   ],

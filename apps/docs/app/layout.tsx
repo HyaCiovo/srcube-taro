@@ -57,8 +57,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
               <ModeSwitcher />
             </div>
           </header>
-          <main className="flex-1 flex flex-col mx-auto mt-16 max-w-screen-2xl w-full">
+          <main className="flex-1 flex flex-col mx-auto mt-16 max-w-screen-2xl w-full z-10">
             {children}
+            <div className="fixed top-0 inset-x-0 h-6 z-0 bg-linear-to-r/longer from-indigo-500 to-teal-400 filter blur-[50px]" />
           </main>
         </Providers>
       </body>
